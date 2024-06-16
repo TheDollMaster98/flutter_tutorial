@@ -31,12 +31,17 @@ class HomePage extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Tutorial 3: Buttons'),
+            title: const Text('Tutorial 3: Bottoni'),
             onTap: () {
               Navigator.pushNamed(context, '/tutorial_3');
             },
           ),
-
+          ListTile(
+            title: const Text('Tutorial 4: Colori'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_3');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),
