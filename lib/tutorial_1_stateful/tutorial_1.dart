@@ -34,13 +34,24 @@ class Tutorial1State extends State<Tutorial1> {
     // Stai utilizzando il widget Scaffold per creare la struttura di base dell'app.
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Statefull'),
+        title: const Text('Stateful'),
       ),
       // Nel corpo dello Scaffold, stai visualizzando un testo al centro dello schermo.
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Text(
+                'Un StatefulWidget mantiene uno stato interno che può cambiare nel tempo, '
+                    'come ad esempio quando un utente interagisce con il widget. \n'
+                'Esempio: aumento, decremento e reset di un valore:',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 20),
             const Text(
               "Il valore cambia tramite setState:",
               style: TextStyle(fontSize: 20),
