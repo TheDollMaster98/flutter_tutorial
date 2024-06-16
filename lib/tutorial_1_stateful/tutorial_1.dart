@@ -34,35 +34,53 @@ class Tutorial1State extends State<Tutorial1> {
     // Stai utilizzando il widget Scaffold per creare la struttura di base dell'app.
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Intro'),
+        title: const Text('Statefull'),
       ),
       // Nel corpo dello Scaffold, stai visualizzando un testo al centro dello schermo.
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Valore tramite initState: $value",
-              style: const TextStyle(fontSize: 30),
+            const Text(
+              "Il valore cambia tramite setState:",
+              style: TextStyle(fontSize: 20),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      // Decrementa il valore di 'value' di 1 ogni volta che il pulsante viene premuto.
+                      value--;
+                    });
+                  },
+                  child: const Text('-'),
+                ),
+                const SizedBox(width: 20),
+                Text(
+                  '$value',
+                  style: const TextStyle(fontSize: 30),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      // Incrementa il valore di 'value' di 1 ogni volta che il pulsante viene premuto.
+                      value++;
+                    });
+                  },
+                  child: const Text('+'),
+                ),
+              ],
             ),
             const SizedBox(height: 20),
-            // Aggiungi un pulsante che cambia lo stato del widget quando premuto.
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  // Incrementa il valore di 'value' di 1 ogni volta che il pulsante viene premuto.
-                  value++;
-                });
-              },
-              child: const Text('Incrementa Valore'),
-            ),
-            const SizedBox(height: 20),
-            // Aggiungi un pulsante che resetta il valore al valore iniziale.
             ElevatedButton(
               onPressed: () {
                 setState(() {
                   // Resetta il valore di 'value' al valore iniziale.
-                  value = 0;
+                  value = initialValue;
                 });
               },
               child: const Text('Resetta Valore'),
