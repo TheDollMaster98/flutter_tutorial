@@ -21,13 +21,19 @@ class HomePage extends StatelessWidget {
             title: const Text('Tutorial 1: Stateless Component'),
             onTap: () {
               Navigator.pushNamed(
-                  context, '/tutorial_3');
+                  context, '/tutorial_1');
             },
           ),
           ListTile(
             title: const Text('Tutorial 2: Stateful Component'),
             onTap: () {
               Navigator.pushNamed(context, '/tutorial_2');
+            },
+          ),
+          ListTile(
+            title: const Text('Tutorial 3: Buttons'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_3');
             },
           ),
 
