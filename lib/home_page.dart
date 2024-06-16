@@ -18,18 +18,19 @@ class HomePage extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Tutorial 1: Stateful Component'),
+            title: const Text('Tutorial 1: Stateless Component'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_1');
+              Navigator.pushNamed(
+                  context, '/tutorial_3');
             },
           ),
           ListTile(
-            title: const Text('Tutorial 2: Stateless Component'),
+            title: const Text('Tutorial 2: Stateful Component'),
             onTap: () {
-              Navigator.pushNamed(
-                  context, '/tutorial_2_custom_component_stateless');
+              Navigator.pushNamed(context, '/tutorial_2');
             },
           ),
+
           // Aggiungi altre voci di tutorial qui...
         ],
       ),

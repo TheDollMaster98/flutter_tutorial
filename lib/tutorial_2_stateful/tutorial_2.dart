@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 // HomePage è un StatefulWidget, il che significa che ha uno stato che può cambiare nel tempo.
-class Tutorial1 extends StatefulWidget {
+class Tutorial2 extends StatefulWidget {
   // Questo è il valore che stai passando al tuo widget HomePage.
   final int value;
-  const Tutorial1(this.value, {super.key});
+  const Tutorial2(this.value, {super.key});
 
   // Creiamo una nuova istanza di HomePageState ogni volta che Flutter decide di ricreare il widget HomePage.
   @override
-  State<StatefulWidget> createState() => Tutorial1State();
+  State<StatefulWidget> createState() => Tutorial2State();
 }
 
 // Questo è lo stato del tuo widget HomePage. Può cambiare nel tempo, per esempio a causa di interazioni dell'utente.
-class Tutorial1State extends State<Tutorial1> {
+class Tutorial2State extends State<Tutorial2> {
   // Variabile che stai utilizzando nel tuo stato.
   // Ottieni dal widget HomePage quando viene inizializzato.
   late int value;

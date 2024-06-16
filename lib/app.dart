@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 import 'tutorial_0_intro/tutorial_0.dart';
-import 'tutorial_1_stateful/tutorial_1.dart';
+import 'tutorial_2_stateful/tutorial_2.dart';
 // Importa gli altri tutorial qui...
 
 class CompleteFlutterTutorialApp extends StatelessWidget {
@@ -22,8 +22,8 @@ class CompleteFlutterTutorialApp extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: {
-        '/tutorial_0': (context) => Tutorial0(),
-        '/tutorial_1': (context) => const Tutorial1(20),
+        '/tutorial_0': (context) => const Tutorial0(),
+        '/tutorial_2': (context) => const Tutorial2(20),
         // Aggiungi le rotte per gli altri tutorial qui...
       },
     );
