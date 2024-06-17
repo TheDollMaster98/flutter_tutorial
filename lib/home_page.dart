@@ -20,8 +20,7 @@ class HomePage extends StatelessWidget {
           ListTile(
             title: const Text('Tutorial 1: Stateless Component'),
             onTap: () {
-              Navigator.pushNamed(
-                  context, '/tutorial_1');
+              Navigator.pushNamed(context, '/tutorial_1');
             },
           ),
           ListTile(
@@ -39,7 +38,7 @@ class HomePage extends StatelessWidget {
           ListTile(
             title: const Text('Tutorial 4: Colori'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_3');
+              Navigator.pushNamed(context, '/tutorial_4');
             },
           ),
           // Aggiungi altre voci di tutorial qui...
