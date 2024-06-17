@@ -41,6 +41,18 @@ class HomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/tutorial_4');
             },
           ),
+          ListTile(
+            title: const Text('Tutorial 5: Immagini'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_5');
+            },
+          ),
+          ListTile(
+            title: const Text('Tutorial 6: Posizionamento'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_6');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),

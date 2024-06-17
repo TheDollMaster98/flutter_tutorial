@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Tutorial3 extends StatelessWidget {
+  const Tutorial3({super.key});
+
   // Questo è un metodo che viene chiamato quando il pulsante viene premuto.
   void onButtonPressed() {
     print("Pressed");
