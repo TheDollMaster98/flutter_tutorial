@@ -16,6 +16,7 @@ class CompleteFlutterTutorialApp extends StatelessWidget {
     // MaterialApp è il widget radice per la maggior parte delle app Flutter
     // include una serie di funzionalità importanti come la navigazione e i temi.
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Complete Flutter Tutorial',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
