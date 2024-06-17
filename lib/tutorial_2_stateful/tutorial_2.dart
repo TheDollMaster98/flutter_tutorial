@@ -45,7 +45,7 @@ class Tutorial2State extends State<Tutorial2> {
               padding: EdgeInsets.all(16.0),
               child: Text(
                 'Un StatefulWidget mantiene uno stato interno che può cambiare nel tempo, '
-                    'come ad esempio quando un utente interagisce con il widget. \n'
+                'come ad esempio quando un utente interagisce con il widget. \n'
                 'Esempio: aumento, decremento e reset di un valore:',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
