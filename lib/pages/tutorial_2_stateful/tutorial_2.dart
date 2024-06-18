@@ -1,100 +1,154 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
-// HomePage è un StatefulWidget, il che significa che ha uno stato che può cambiare nel tempo.
 class Tutorial2 extends StatefulWidget {
-  // Questo è il valore che stai passando al tuo widget HomePage.
   final int value;
   const Tutorial2(this.value, {super.key});
 
-  // Creiamo una nuova istanza di HomePageState ogni volta che Flutter decide di ricreare il widget HomePage.
   @override
   State<StatefulWidget> createState() => Tutorial2State();
 }
 
-// Questo è lo stato del tuo widget HomePage. Può cambiare nel tempo, per esempio a causa di interazioni dell'utente.
 class Tutorial2State extends State<Tutorial2> {
-  // Variabile che stai utilizzando nel tuo stato.
-  // Ottieni dal widget HomePage quando viene inizializzato.
   late int value;
   late int initialValue;
 
-  // initState è il primo metodo chiamato dopo che il widget è stato creato.
-  // È chiamato solo una volta per la vita del widget.
   @override
   void initState() {
-    // Qui stai assegnando il valore che hai ottenuto dal widget HomePage alla tua variabile 'value'.
     initialValue = widget.value;
     value = initialValue;
     super.initState();
   }
 
-  // Metodo build. È chiamato ogni volta che Flutter decide di ridisegnare il tuo widget.
   @override
   Widget build(BuildContext context) {
-    // Stai utilizzando il widget Scaffold per creare la struttura di base dell'app.
     return Scaffold(
       appBar: AppBar(
         title: const Text('Stateful'),
       ),
-      // Nel corpo dello Scaffold, stai visualizzando un testo al centro dello schermo.
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            sectionTitle("StatefulWidget"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Un StatefulWidget mantiene uno stato interno che può cambiare nel tempo, "
+              "come ad esempio quando un utente interagisce con il widget. "
+              "Esempio: aumento, decremento e reset di un valore:",
+            ),
+            const SizedBox(height: 20),
+            propertyExample(
+              "Il valore cambia tramite setState:",
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              value--;
+                            });
+                          },
+                          child: const Text('-'),
+                        ),
+                        const SizedBox(width: 20),
+                        Text(
+                          '$value',
+                          style: const TextStyle(fontSize: 30),
+                        ),
+                        const SizedBox(width: 20),
+                        ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              value++;
+                            });
+                          },
+                          child: const Text('+'),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          value = initialValue;
+                        });
+                      },
+                      child: const Text('Resetta Valore'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 40),
+            sectionTitle("Struttura di un StatefulWidget"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Esempio di base di un widget con stato che mostra come definire e utilizzare un StatefulWidget.",
+            ),
+            propertyExample(
+              "StatefulWidget",
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '''
+import 'package:flutter/material.dart';
+
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+
+// Stato associato a MyStatefulWidget
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('StatefulWidget Example'),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'Un StatefulWidget mantiene uno stato interno che può cambiare nel tempo, '
-                'come ad esempio quando un utente interagisce con il widget. \n'
-                'Esempio: aumento, decremento e reset di un valore:',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
-              ),
+          children: <Widget>[
+            Text(
+              'Hai premuto il pulsante questo numero di volte:',
             ),
-            const SizedBox(height: 20),
-            const Text(
-              "Il valore cambia tramite setState:",
-              style: TextStyle(fontSize: 20),
+            Text(
+              '\$_counter',
+              style: Theme.of(context).textTheme.headline4,
             ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      // Decrementa il valore di 'value' di 1 ogni volta che il pulsante viene premuto.
-                      value--;
-                    });
-                  },
-                  child: const Text('-'),
-                ),
-                const SizedBox(width: 20),
-                Text(
-                  '$value',
-                  style: const TextStyle(fontSize: 30),
-                ),
-                const SizedBox(width: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      // Incrementa il valore di 'value' di 1 ogni volta che il pulsante viene premuto.
-                      value++;
-                    });
-                  },
-                  child: const Text('+'),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  // Resetta il valore di 'value' al valore iniziale.
-                  value = initialValue;
-                });
-              },
-              child: const Text('Resetta Valore'),
+              onPressed: _incrementCounter,
+              child: Text('Incrementa Contatore'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+                    ''',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
