@@ -46,6 +46,31 @@ class Tutorial6 extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Container(
+  padding: const EdgeInsets.all(16),
+  margin: const EdgeInsets.all(16),
+  decoration: BoxDecoration(
+    color: Colors.blue.shade100,
+    borderRadius: BorderRadius.circular(12),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.5),
+        spreadRadius: 5,
+        blurRadius: 7,
+        offset: const Offset(0, 3),
+      ),
+    ],
+   ),
+child: const Text(
+'Testo',
+style: TextStyle(fontSize: 16),
+textAlign: TextAlign.center,
+),
+),'''),
+            ),
             explanationText(
               "Il Container possiamo vederlo come se fosse un div in HTML.",
             ),
@@ -83,6 +108,26 @@ class Tutorial6 extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+BoxDecoration(
+color: Colors.white,
+border: Border.all(color: Colors.grey.shade300, width: 1),
+borderRadius: BorderRadius.circular(16),
+                  // Posso avere o borderRadius o shape per definire i bordi.
+                  // shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      // Sfumatura:
+                      blurRadius: 5,
+                      // Quanto deve allargarsi al di fuori del contenitore.
+                      spreadRadius: 2,
+                      color: Colors.black.withOpacity(0.3),
+                    ),
+                  ],
+                ),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("SizedBox"),
