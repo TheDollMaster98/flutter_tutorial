@@ -85,6 +85,105 @@ class Tutorial5 extends StatelessWidget {
                 },
               ),
             ),
+            const SizedBox(height: 40),
+            sectionTitle("Esempi di codice"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Di seguito sono riportati esempi di codice per l'uso dei vari metodi di caricamento delle immagini in Flutter.",
+            ),
+            propertyExample(
+              "Esempi di codice per immagini",
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '''
+            const Text(
+              'Immagini da Network',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            
+            const SizedBox(height: 10),
+            
+            const SizedBox(
+              width: 200,
+              height: 200,
+              child: Image(
+                image: NetworkImage(
+                    "https://link.com"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            
+            const SizedBox(height: 20),
+            
+            const Text(
+              'Immagini Locali',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            
+            const SizedBox(
+              width: 200,
+              height: 200,
+              child: Image(
+                image: AssetImage("assets/images/propic.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Immagini Locali con CircleAvatar',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+
+            const SizedBox(height: 10),
+            
+            const CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage("assets/images/propic.jpg"),
+            ),
+            
+            const SizedBox(height: 20),
+            
+            const Text(
+              'Immagini da File',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+     
+            const SizedBox(height: 10),
+            
+            FutureBuilder(
+              future: _loadImageFromFile(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return snapshot.data as Widget;
+                } else {
+                  return const CircularProgressIndicator();
+                }
+              },
+            ),
+            
+
+  Future<Widget> _loadImageFromFile() async {
+    // Simuliamo il caricamento di un'immagine da un file
+    // Sostituisci questa parte con il caricamento reale da un file
+    await Future.delayed(const Duration(seconds: 2));
+    return const SizedBox(
+      width: 200,
+      height: 200,
+      child: Image(
+        image: AssetImage("assets/images/propic.jpg"),
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+                    ''',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

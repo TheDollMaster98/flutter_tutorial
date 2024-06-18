@@ -39,6 +39,18 @@ class Tutorial3 extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice TextButton:",
+              const Text('''
+TextButton(
+  onPressed: onButtonPressed,
+  child: const Text(
+    "Text Button",
+     style: TextStyle(fontSize: 30),
+  ),
+),'''),
+            ),
             const SizedBox(height: 20),
             // Spiegazione dell'ElevatedButton
             explanationText(
@@ -56,6 +68,18 @@ class Tutorial3 extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice ElevatedButton:",
+              const Text('''
+ElevatedButton(
+  onPressed:onButtonPressed,
+  child: const Text(
+    "Elevated Button",
+    style: TextStyle(fontSize: 30),
+  ),
+),'''),
+            ),
             const SizedBox(height: 20),
             // Spiegazione dell'IconButton
             explanationText(
@@ -69,6 +93,16 @@ class Tutorial3 extends StatelessWidget {
                 onPressed: onButtonPressed,
                 icon: const Icon(Icons.plus_one, size: 50, color: Colors.pink),
               ),
+            ),
+            const SizedBox(height: 10),
+            // Esempio di IconButton
+            propertyExample(
+              "Codice IconButton:",
+              const Text('''
+IconButton(
+  onPressed: onButtonPressed,
+  icon: const Icon(Icons.plus_one, size: 50, color: Colors.pink),
+),'''),
             ),
           ],
         ),
