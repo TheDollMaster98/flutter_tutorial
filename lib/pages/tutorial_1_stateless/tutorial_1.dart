@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/tutorial_1_stateless/components/text_head_line.dart';
+import 'package:flutter_tutorial/pages/tutorial_1_stateless/components/text_head_line.dart';
 
 // Flutter si basa solo sui componenti, quindi anche il titolo può essere un componente.
 // Questa classe estende StatelessWidget, che è la base per i widget che descrivono

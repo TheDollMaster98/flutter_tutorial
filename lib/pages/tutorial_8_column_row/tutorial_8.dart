@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/tutorial_8_column_row/widgets/tutorial_8_widgets.dart';
+import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
 class Tutorial8 extends StatelessWidget {
   const Tutorial8({super.key});

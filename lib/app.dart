@@ -1,14 +1,13 @@
 // lib/app.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/tutorial_1_stateless/tutorial_1.dart';
-import 'package:flutter_tutorial/tutorial_3_buttons/tutorial_3.dart';
-import 'package:flutter_tutorial/tutorial_4_colors/tutorial_4.dart';
-import 'package:flutter_tutorial/tutorial_5_images/tutorial_5.dart';
-import 'package:flutter_tutorial/tutorial_8_column_row/tutorial_8.dart';
+import 'package:flutter_tutorial/pages/tutorial_0_intro/tutorial_0.dart';
+import 'package:flutter_tutorial/pages/tutorial_1_stateless/tutorial_1.dart';
+import 'package:flutter_tutorial/pages/tutorial_2_stateful/tutorial_2.dart';
+import 'package:flutter_tutorial/pages/tutorial_3_buttons/tutorial_3.dart';
+import 'package:flutter_tutorial/pages/tutorial_4_colors/tutorial_4.dart';
+import 'package:flutter_tutorial/pages/tutorial_5_images/tutorial_5.dart';
+import 'package:flutter_tutorial/pages/tutorial_8_column_row/tutorial_8.dart';
 import 'home_page.dart';
-import 'tutorial_0_intro/tutorial_0.dart';
-import 'tutorial_2_stateful/tutorial_2.dart';
-// Importa gli altri tutorial qui...
 
 class CompleteFlutterTutorialApp extends StatelessWidget {
   @override
@@ -42,7 +41,6 @@ class CompleteFlutterTutorialApp extends StatelessWidget {
         '/tutorial_4': (context) => const Tutorial4(),
         '/tutorial_5': (context) => const Tutorial5(),
         '/tutorial_8': (context) => const Tutorial8(),
-        // Aggiungi le rotte per gli altri tutorial qui...
       },
     );
   }
