@@ -24,6 +24,7 @@ class Tutorial3 extends StatelessWidget {
             sectionTitle("I vari tipi di bottoni in Flutter"),
             const SizedBox(height: 20),
             // Spiegazione del TextButton
+            sectionTitle("Bottone con testo"),
             explanationText(
               "TextButton: mostra un testo che descrive l'azione.",
             ),
@@ -52,6 +53,7 @@ TextButton(
 ),'''),
             ),
             const SizedBox(height: 20),
+            sectionTitle("Bottone ombreggiato"),
             // Spiegazione dell'ElevatedButton
             explanationText(
               "ElevatedButton: pulsante con inchiostro splash e ombreggiatura.",
@@ -81,6 +83,7 @@ ElevatedButton(
 ),'''),
             ),
             const SizedBox(height: 20),
+            sectionTitle("Bottone con icona"),
             // Spiegazione dell'IconButton
             explanationText(
               "IconButton: pulsante con un'icona senza testo.",
