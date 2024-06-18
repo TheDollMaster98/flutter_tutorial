@@ -153,6 +153,25 @@ borderRadius: BorderRadius.circular(16),
                 ),
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+SizedBox(
+  width: 200,
+  height: 100,
+  child: Card(
+    color: Colors.amber,
+    child: Center(
+      child: Text(
+        'Questo è un SizedBox con larghezza e altezza specificate.',
+        style: TextStyle(fontSize: 16),
+        textAlign: TextAlign.center,
+      ),
+    ),
+  ),
+),'''),
+            ),
             const SizedBox(height: 20),
             explanationText(
               "È possibile utilizzare SizedBox anche per dare spazio tra gli elementi.",
@@ -172,6 +191,20 @@ borderRadius: BorderRadius.circular(16),
                   ),
                 ],
               ),
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  'Elemento 1',
+  style: TextStyle(fontSize: 16),
+),
+SizedBox(height: 20),
+Text(
+  'Elemento 2',
+  style: TextStyle(fontSize: 16),
+),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("Padding"),
