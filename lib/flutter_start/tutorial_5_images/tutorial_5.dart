@@ -22,6 +22,7 @@ class Tutorial5 extends StatelessWidget {
               "BoxFit.cover determina come l'immagine dovrebbe essere ridimensionata per adattarsi al suo box. "
               "In questo caso, l'immagine coprirà tutto il box, potenzialmente perdendo parte dell'immagine per evitare di distorcere l'immagine.",
             ),
+            const SizedBox(height: 10),
             propertyExample(
               "Immagine da Network",
               const SizedBox(
@@ -34,12 +35,24 @@ class Tutorial5 extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Image( 
+  image: NetworkImage(
+    "https://link.com",
+  ),
+  fit: BoxFit.cover,
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("Immagini Locali"),
             const SizedBox(height: 10),
             explanationText(
               "AssetImage carica un'immagine locale. È possibile specificare il percorso dell'immagine nella directory degli asset dell'applicazione.",
             ),
+            const SizedBox(height: 10),
             propertyExample(
               "Immagine Locale",
               const SizedBox(
@@ -51,6 +64,17 @@ class Tutorial5 extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Image( 
+  image: AssetImage(
+    "assets/images/img.jpg",
+  ),
+  fit: BoxFit.cover,
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("Immagini Locali con CircleAvatar"),
             const SizedBox(height: 10),
@@ -59,6 +83,7 @@ class Tutorial5 extends StatelessWidget {
               "È possibile impostare un'immagine di sfondo con backgroundImage. "
               "Utilizzare sempre backgroundImage invece di foregroundImage per garantire un fallback appropriato.",
             ),
+            const SizedBox(height: 10),
             propertyExample(
               "Immagine Locale con CircleAvatar",
               const CircleAvatar(
@@ -66,12 +91,22 @@ class Tutorial5 extends StatelessWidget {
                 backgroundImage: AssetImage("assets/images/propic.jpg"),
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+CircleAvatar(
+  radius: 50,
+  backgroundImage: AssetImage("assets/images/img.jpg"),
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("Immagini da File"),
             const SizedBox(height: 10),
             explanationText(
               "FileImage carica un'immagine da un file locale. È necessario fornire un oggetto File che punta al percorso dell'immagine.",
             ),
+            const SizedBox(height: 10),
             propertyExample(
               "Immagine da File",
               FutureBuilder(
@@ -85,104 +120,35 @@ class Tutorial5 extends StatelessWidget {
                 },
               ),
             ),
-            const SizedBox(height: 40),
-            sectionTitle("Esempi di codice"),
             const SizedBox(height: 10),
-            explanationText(
-              "Di seguito sono riportati esempi di codice per l'uso dei vari metodi di caricamento delle immagini in Flutter.",
-            ),
             propertyExample(
-              "Esempi di codice per immagini",
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '''
-            const Text(
-              'Immagini da Network',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            
-            const SizedBox(height: 10),
-            
-            const SizedBox(
-              width: 200,
-              height: 200,
-              child: Image(
-                image: NetworkImage(
-                    "https://link.com"),
-                fit: BoxFit.cover,
-              ),
-            ),
-            
-            const SizedBox(height: 20),
-            
-            const Text(
-              'Immagini Locali',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
-            
-            const SizedBox(
-              width: 200,
-              height: 200,
-              child: Image(
-                image: AssetImage("assets/images/propic.jpg"),
-                fit: BoxFit.cover,
-              ),
-            ),
-            const SizedBox(height: 20),
-            const Text(
-              'Immagini Locali con CircleAvatar',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-
-            const SizedBox(height: 10),
-            
-            const CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage("assets/images/propic.jpg"),
-            ),
-            
-            const SizedBox(height: 20),
-            
-            const Text(
-              'Immagini da File',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-     
-            const SizedBox(height: 10),
-            
-            FutureBuilder(
-              future: _loadImageFromFile(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  return snapshot.data as Widget;
-                } else {
-                  return const CircularProgressIndicator();
-                }
-              },
-            ),
-            
-
-  Future<Widget> _loadImageFromFile() async {
-    // Simuliamo il caricamento di un'immagine da un file
-    // Sostituisci questa parte con il caricamento reale da un file
-    await Future.delayed(const Duration(seconds: 2));
-    return const SizedBox(
-      width: 200,
-      height: 200,
-      child: Image(
-        image: AssetImage("assets/images/propic.jpg"),
-        fit: BoxFit.cover,
-      ),
-    );
-  }
-                    ''',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                ],
-              ),
+              "Codice:",
+              const Text('''
+FutureBuilder(
+  future: _loadImageFromFile(),
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.done) {
+    return snapshot.data as Widget;
+    } else {
+      return const CircularProgressIndicator();
+    }
+  },
+),
+              
+              
+Future<Widget> _loadImageFromFile() async {
+  // Simuliamo il caricamento di un'immagine da un file
+  // Sostituisci questa parte con il caricamento reale da un file
+  await Future.delayed(const Duration(seconds: 2));
+  return const SizedBox(
+    width: 200,
+    height: 200,
+    child: Image(
+      image: AssetImage("assets/images/img.jpg"),
+      fit: BoxFit.cover,
+    ),
+  );
+}'''),
             ),
           ],
         ),
