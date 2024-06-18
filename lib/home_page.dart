@@ -48,9 +48,33 @@ class HomePage extends StatelessWidget {
             },
           ),
           ListTile(
+            title: const Text('Tutorial 6: Contenitori'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_6');
+            },
+          ),
+          ListTile(
+            title: const Text('Tutorial 7: Card'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_7');
+            },
+          ),
+          ListTile(
             title: const Text('Tutorial 8: Column & Row'),
             onTap: () {
               Navigator.pushNamed(context, '/tutorial_8');
+            },
+          ),
+          ListTile(
+            title: const Text('Tutorial 9: Stack'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_9');
+            },
+          ),
+          ListTile(
+            title: const Text('Tutorial 10: SafeArea e Scroll'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_10');
             },
           ),
           // Aggiungi altre voci di tutorial qui...
