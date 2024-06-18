@@ -44,7 +44,7 @@ Widget propertyExample(String propertyName, Widget child) {
 // Widget per creare box colorati usati negli esempi
 Widget coloredBox(Color color) {
   return Container(
-    width: 100,
+    width: 70,
     height: 50,
     color: color,
     margin: const EdgeInsets.symmetric(vertical: 5),

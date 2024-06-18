@@ -86,9 +86,12 @@ class Tutorial6 extends StatelessWidget {
                   color: Colors.grey.shade100,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       coloredBox(Colors.blue),
+                      const SizedBox(width: 10),
                       coloredBox(Colors.green),
+                      const SizedBox(width: 10),
                       coloredBox(Colors.red),
                     ],
                   ),
@@ -106,9 +109,12 @@ class Tutorial6 extends StatelessWidget {
                   color: Colors.grey.shade100,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       coloredBox(Colors.blue),
+                      const SizedBox(width: 10),
                       coloredBox(Colors.green),
+                      const SizedBox(width: 10),
                       coloredBox(Colors.red),
                     ],
                   ),
@@ -126,9 +132,12 @@ class Tutorial6 extends StatelessWidget {
                   color: Colors.grey.shade100,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       coloredBox(Colors.blue),
+                      const SizedBox(width: 10),
                       coloredBox(Colors.green),
+                      const SizedBox(width: 10),
                       coloredBox(Colors.red),
                     ],
                   ),
