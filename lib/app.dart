@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/flutter_start/tutorial_0_intro/tutorial_0.dart';
 import 'package:flutter_tutorial/flutter_start/tutorial_10_list/tutorial_10.dart';
+import 'package:flutter_tutorial/flutter_start/tutorial_11_listview/tutorial_11.dart';
 import 'package:flutter_tutorial/flutter_start/tutorial_1_stateless/tutorial_1.dart';
 import 'package:flutter_tutorial/flutter_start/tutorial_2_stateful/tutorial_2.dart';
 import 'package:flutter_tutorial/flutter_start/tutorial_3_buttons/tutorial_3.dart';
@@ -48,6 +49,7 @@ class CompleteFlutterTutorialApp extends StatelessWidget {
         '/tutorial_8': (context) => const Tutorial8(),
         '/tutorial_9': (context) => const Tutorial9(),
         '/tutorial_10': (context) => const Tutorial10(),
+        '/tutorial_11': (context) => const Tutorial11(),
       },
     );
   }

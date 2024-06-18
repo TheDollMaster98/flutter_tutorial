@@ -76,7 +76,7 @@ class Tutorial10 extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: List.generate(
-                      100,
+                      20,
                       (index) => InkWell(
                         onTap: () {
                           print("Clicked: ${index + 1} Pokémon");
