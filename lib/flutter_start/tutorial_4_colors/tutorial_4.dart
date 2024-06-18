@@ -39,6 +39,19 @@ class Tutorial4 extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  'Testo in blu',
+  style: TextStyle(
+    color: Colors.blue,
+    fontSize: 30,
+  ),
+  textAlign: TextAlign.center,
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("Selezione colori shade"),
             const SizedBox(height: 10),
@@ -55,6 +68,19 @@ class Tutorial4 extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  'Testo in blu chiaro',
+  style: TextStyle(
+    color: Colors.blue[100],
+    fontSize: 30,
+  ),
+  textAlign: TextAlign.center,
+),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("Colore con rgb ed opacità"),
@@ -73,6 +99,19 @@ class Tutorial4 extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  'Testo con colore RGBA',
+  style: TextStyle(
+    color: Color.fromARGB(125, 0, 0, 255),
+    fontSize: 30,
+  ),
+  textAlign: TextAlign.center,
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("Colore con rgb hex"),
             const SizedBox(height: 10),
@@ -89,6 +128,19 @@ class Tutorial4 extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  'Testo con colore esadecimale',
+  style: TextStyle(
+    color: Color(0xFF0000FF),
+    fontSize: 30,
+  ),
+  textAlign: TextAlign.center,
+),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("Icone di Flutter"),
@@ -107,6 +159,12 @@ class Tutorial4 extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Icon(Icons.auto_delete, size: 50)'''),
+            ),
             const SizedBox(height: 20),
             propertyExample(
               "Icona con colore",
@@ -122,6 +180,16 @@ class Tutorial4 extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Icon(
+  Icons.auto_delete, 
+  size: 50, 
+  color: Colors.purple
+)'''),
+            ),
             const SizedBox(height: 20),
             propertyExample(
               "Icona outlined senza colore",
@@ -136,6 +204,12 @@ class Tutorial4 extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Icon(Icons.auto_delete_outlined, size: 50)'''),
             ),
             const SizedBox(height: 20),
             propertyExample(
@@ -153,122 +227,15 @@ class Tutorial4 extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 40),
-            sectionTitle("Esempi di codice"),
             const SizedBox(height: 10),
-            explanationText(
-              "Di seguito sono riportati esempi di codice per l'uso dei vari metodi di selezione dei colori e delle icone in Flutter.",
-            ),
             propertyExample(
-              "Esempi di codice per selezione colori e icone",
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '''
-        Text(
-          'Colori',
-          style: TextStyle(
-            color: Colors.blue[100],
-          ),
-        ),
-        
-         Text(
-              'Testo in blu',
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 30,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            
-            const SizedBox(height: 20),
-            
-            Text(
-              'Testo in blu chiaro',
-              style: TextStyle(
-                color: Colors.blue[100],
-                fontSize: 30,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            
-            const SizedBox(height: 20),
-            
-            const Text(
-              'Testo con colore RGBA',
-              style: TextStyle(
-                color: Color.fromARGB(125, 0, 0, 255),
-                fontSize: 30,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            
-            const SizedBox(height: 20),
-            
-            const Text(
-              'Testo con colore esadecimale',
-              style: TextStyle(
-                color: Color(0xFF0000FF),
-                fontSize: 30,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            
-            const SizedBox(height: 20),
-            
-            const Icon(Icons.auto_delete, size: 50),
-            
-            const SizedBox(height: 10),
-            
-            const Text(
-              'Icona senza colore',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
-            ),
-            
-            const SizedBox(height: 20),
-            
-            const Icon(Icons.auto_delete, size: 50, color: Colors.purple),
-            
-            const SizedBox(height: 10),
-            
-            const Text(
-              'Icona con colore',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
-            ),
-            
-            const SizedBox(height: 20),
-            
-            const Icon(Icons.auto_delete_outlined, size: 50),
-            
-            const SizedBox(height: 10),
-            
-            const Text(
-              'Icona outlined senza colore',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
-            ),
-            
-            const SizedBox(height: 20),
-            
-            Icon(Icons.auto_delete_outlined,
-                size: 50, color: Colors.grey.shade600),
-                
-            const SizedBox(height: 10),
-            
-            const Text(
-              'Icona outlined con colore',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
-            ),
-            
-                    ''',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                ],
-              ),
+              "Codice:",
+              const Text('''
+Icon(
+  Icons.auto_delete_outlined,
+  size: 50, 
+  color: Colors.grey.shade600
+),'''),
             ),
           ],
         ),
