@@ -8,7 +8,7 @@ final List<Map<String, String>> sections = [
   {
     'title': 'Flutter Start',
     'description':
-        'Scopri cos\'è Flutter, i componenti, come fare chiamate HTTP e gestire i JSON.',
+        'Scopri cos\'è Flutter, i suoi componenti, come fare chiamate HTTP e gestire i JSON.',
     'route': '/flutter_start'
   },
   {
