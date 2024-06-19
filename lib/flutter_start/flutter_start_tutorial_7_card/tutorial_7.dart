@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
-class Tutorial7 extends StatefulWidget {
-  const Tutorial7({super.key});
+class FlutterStartTutorial7 extends StatefulWidget {
+  const FlutterStartTutorial7({super.key});
 
   @override
-  Tutorial7State createState() => Tutorial7State();
+  FlutterStartTutorial7State createState() => FlutterStartTutorial7State();
 }
 
-class Tutorial7State extends State<Tutorial7> {
+class FlutterStartTutorial7State extends State<FlutterStartTutorial7> {
   int counter = 0;
 
   void incrementCounter() {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
-class Tutorial6 extends StatelessWidget {
-  const Tutorial6({super.key});
+class FlutterStartTutorial6 extends StatelessWidget {
+  const FlutterStartTutorial6({super.key});
 
   @override
   Widget build(BuildContext context) {
