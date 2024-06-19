@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/model/routes.dart';
 import 'pages/home_page.dart';
 
-class CompleteFlutterTutorialApp extends StatelessWidget {
-  const CompleteFlutterTutorialApp({super.key});
+class CompleteFlutterGuideApp extends StatelessWidget {
+  const CompleteFlutterGuideApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,15 +11,35 @@ class CompleteFlutterTutorialApp extends StatelessWidget {
     // include una serie di funzionalità importanti come la navigazione e i temi.
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Complete Flutter Tutorial',
+      title: 'Flutter 3 Guida',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        // Colore globale dell'AppBar:
+        primaryColor: const Color(0xFF1976D2), // Primary color: Blue
+        hintColor: const Color(0xFFFFC107), // Accent color: Amber
+        scaffoldBackgroundColor:
+            const Color(0xFFFFFFFF), // Background color: White
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.purpleAccent,
+          backgroundColor: Color(0xFF1976D2), // AppBar color: Blue
+          titleTextStyle: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold, // Make the title bold
+            color: Colors.white,
+          ),
         ),
+        cardColor: const Color(0xFFBBDEFB), // Card color: Light Blue
         textTheme: const TextTheme(
-          bodyMedium: TextStyle(fontSize: 18.0),
+          bodyMedium: TextStyle(
+              fontSize: 18.0,
+              color: Color(0xFF212121)), // Text color: Dark Grey
+          bodySmall: TextStyle(
+              fontSize: 16.0,
+              color: Color(0xFF212121)), // Text color: Dark Grey
+        ),
+        buttonTheme: const ButtonThemeData(
+          buttonColor: Color(0xFF1976D2), // Button color: Blue
+          textTheme: ButtonTextTheme.primary,
+        ),
+        iconTheme: const IconThemeData(
+          color: Color(0xFFFFFFFF), // Icon color: White
         ),
       ),
       home: const HomePage(),
