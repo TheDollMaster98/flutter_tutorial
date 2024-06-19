@@ -14,7 +14,7 @@ class WorkingInProgressPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '404',
+              'Coming Soon',
               style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),

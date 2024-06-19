@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_1_stateless/components/text_head_line.dart';
 import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
-import 'package:flutter_tutorial/flutter_start/tutorial_1_stateless/components/text_head_line.dart';
 
 // Flutter si basa solo sui componenti, quindi anche il titolo può essere un componente.
 // Questa classe estende StatelessWidget, che è la base per i widget che descrivono
 // una parte dell'interfaccia utente in termini di altri widget più bassi.
-class Tutorial1 extends StatelessWidget {
+class FlutterStartTutorial1 extends StatelessWidget {
   final int value;
   final String word;
   final String word2;
   final TextStyle style;
 
   // Posso inizializzare nel costruttore le variabili così:
-  const Tutorial1(this.word, this.value,
+  const FlutterStartTutorial1(this.word, this.value,
       {super.key, required this.word2, required this.style});
 
   @override
