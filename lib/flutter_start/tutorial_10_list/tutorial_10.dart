@@ -36,6 +36,22 @@ class Tutorial10 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+SafeArea(
+  child: Container(
+    color: Colors.blue,
+    height: 100,
+    child: const Center(
+      child: Text(
+        'Questo è un SafeArea',
+        style: TextStyle(color: Colors.white, fontSize: 16),
+      ),
+    ),
+  ),
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("SingleChildScrollView"),
             const SizedBox(height: 10),
@@ -61,6 +77,26 @@ class Tutorial10 extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Container(
+  height: 200,
+  color: Colors.green.shade100,
+  child: SingleChildScrollView(
+    child: Column(
+      children: List.generate(
+        20,
+        (index) => Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('Elemento \$index',
+              style: const TextStyle(fontSize: 16)),
+        ),
+      ),
+    ),
+  ),
+),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("Esempio Completo"),
@@ -94,6 +130,32 @@ class Tutorial10 extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+SafeArea(
+  child: SingleChildScrollView(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: List.generate(
+        20,
+        (index) => InkWell(
+          onTap: () {
+            print("Clicked: \${index + 1} Pokémon");
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Text(
+              '#\${index + 1} Pokémon',
+              style: const TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+),'''),
             ),
           ],
         ),

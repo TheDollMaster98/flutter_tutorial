@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class FlutterStartPage extends StatelessWidget {
+  const FlutterStartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Complete Flutter Tutorial'),
+        title: const Text('Flutter Start'),
       ),
       body: ListView(
         children: <Widget>[
@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Tutorial 10: ListView'),
+            title: const Text('Tutorial 11: ListView'),
             onTap: () {
               Navigator.pushNamed(context, '/tutorial_11');
             },

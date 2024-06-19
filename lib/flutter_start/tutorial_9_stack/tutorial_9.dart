@@ -46,6 +46,29 @@ class Tutorial9 extends StatelessWidget {
                 ],
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Stack(
+  children: [
+    Container(
+      width: 200,
+      height: 200,
+      color: Colors.blue,
+    ),
+    Container(
+      width: 150,
+      height: 150,
+      color: Colors.green,
+    ),
+    Container(
+      width: 100,
+      height: 100,
+      color: Colors.red,
+    ),
+  ],
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("Posizionamento con Positioned"),
             const SizedBox(height: 10),
@@ -87,6 +110,41 @@ class Tutorial9 extends StatelessWidget {
                 ],
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Stack(
+  children: [
+    Center(
+      child: Icon(
+        Icons.person,
+        size: 80,
+      ),
+    ),
+    Positioned(
+      top: 0,
+      right: 150,
+      child: Container(
+        width: 30,
+        height: 30,
+        decoration: BoxDecoration(
+          color: Colors.red,
+          shape: BoxShape.circle,
+        ),
+        child: Center(
+          child: Text(
+            "2",
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    ),
+  ],
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("Allineamento dei Figli nello Stack"),
             const SizedBox(height: 10),
@@ -116,6 +174,30 @@ class Tutorial9 extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Stack(
+  alignment: Alignment.center,
+  children: [
+    Container(
+      width: 200,
+      height: 200,
+      color: Colors.blue,
+    ),
+    Container(
+      width: 150,
+      height: 150,
+      color: Colors.green,
+    ),
+    Container(
+      width: 100,
+      height: 100,
+      color: Colors.red,
+    ),
+  ],
+),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("Clip Behavior"),
@@ -154,6 +236,38 @@ class Tutorial9 extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Stack(
+  clipBehavior: Clip.hardEdge,
+  children: [
+    Container(
+      width: 200,
+      height: 200,
+      color: Colors.blue,
+    ),
+    Positioned(
+      top: 100,
+      left: 100,
+      child: Container(
+        width: 150,
+        height: 150,
+        color: Colors.green.withOpacity(0.5),
+      ),
+    ),
+    Positioned(
+      top: 150,
+      left: 150,
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.red.withOpacity(0.5),
+      ),
+    ),
+  ],
+),'''),
             ),
           ],
         ),

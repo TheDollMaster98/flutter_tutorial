@@ -40,6 +40,20 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Text("Elemento 1", style: TextStyle(fontSize: 20)),
+    SizedBox(width: 10),
+    Text("Elemento 2", style: TextStyle(fontSize: 20)),
+    SizedBox(width: 10),
+    Text("Elemento 3", style: TextStyle(fontSize: 20)),
+  ],
+),'''),
+            ),
             const SizedBox(height: 20),
             // Esempio di una Column normale
             sectionTitle("Widget Column"),
@@ -66,6 +80,20 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Text("Riga 1", style: TextStyle(fontSize: 20)),
+    SizedBox(height: 10),
+    Text("Riga 2", style: TextStyle(fontSize: 20)),
+    SizedBox(height: 10),
+    Text("Riga 3", style: TextStyle(fontSize: 20)),
+  ],
+),'''),
+            ),
             const SizedBox(height: 40),
             // Titolo della sezione per MainAxisAlignment
             sectionTitle("MainAxisAlignment"),
@@ -91,6 +119,20 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    coloredBox(Colors.blue),
+    SizedBox(width: 10),
+    coloredBox(Colors.green),
+    SizedBox(width: 10),
+    coloredBox(Colors.red),
+  ],
+),'''),
+            ),
             const SizedBox(height: 20),
             // Esempio di utilizzo di MainAxisAlignment.start
             propertyExample(
@@ -108,6 +150,20 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  mainAxisAlignment: MainAxisAlignment.start,
+  children: [
+    coloredBox(Colors.blue),
+    SizedBox(width: 10),
+    coloredBox(Colors.green),
+    SizedBox(width: 10),
+    coloredBox(Colors.red),
+  ],
+),'''),
+            ),
             const SizedBox(height: 20),
             // Esempio di utilizzo di MainAxisAlignment.end
             propertyExample(
@@ -124,6 +180,20 @@ class Tutorial8 extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  mainAxisAlignment: MainAxisAlignment.end,
+  children: [
+    coloredBox(Colors.blue),
+    SizedBox(width: 10),
+    coloredBox(Colors.green),
+    SizedBox(width: 10),
+    coloredBox(Colors.red),
+  ],
+),'''),
             ),
             const SizedBox(height: 40),
             // Titolo della sezione per CrossAxisAlignment
@@ -156,6 +226,21 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  crossAxisAlignment: CrossAxisAlignment.center,
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    coloredBox(Colors.blue),
+    SizedBox(width: 10),
+    coloredBox(Colors.green),
+    SizedBox(width: 10),
+    coloredBox(Colors.red),
+  ],
+),'''),
+            ),
             const SizedBox(height: 20),
             // Esempio di utilizzo di CrossAxisAlignment.start
             propertyExample(
@@ -178,6 +263,21 @@ class Tutorial8 extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    coloredBox(Colors.blue),
+    SizedBox(width: 10),
+    coloredBox(Colors.green),
+    SizedBox(width: 10),
+    coloredBox(Colors.red),
+  ],
+),'''),
             ),
             const SizedBox(height: 20),
             // Esempio di utilizzo di CrossAxisAlignment.end
@@ -203,6 +303,22 @@ class Tutorial8 extends StatelessWidget {
               ),
             ),
             propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  crossAxisAlignment: CrossAxisAlignment.end,
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    coloredBox(Colors.blue),
+    SizedBox(width: 10),
+    coloredBox(Colors.green),
+    SizedBox(width: 10),
+    coloredBox(Colors.red),
+  ],
+),'''),
+            ),
+            const SizedBox(height: 20),
+            propertyExample(
               "CrossAxisAlignment.stretch",
               Center(
                 child: Container(
@@ -223,6 +339,22 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    coloredBox(Colors.blue),
+    SizedBox(width: 10),
+    coloredBox(Colors.green),
+    SizedBox(width: 10),
+    coloredBox(Colors.red),
+  ],
+),'''),
+            ),
+            const SizedBox(height: 20),
             propertyExample(
               "CrossAxisAlignment.baseline",
               Center(
@@ -264,6 +396,40 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Row(
+  crossAxisAlignment: CrossAxisAlignment.baseline,
+  textBaseline: TextBaseline.alphabetic,
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Text(
+      'Blu',
+      style: TextStyle(
+        fontSize: 30,
+        color: Colors.blue,
+      ),
+    ),
+    SizedBox(width: 10),
+    Text(
+      'Verde',
+      style: TextStyle(
+        fontSize: 40,
+        color: Colors.green,
+      ),
+    ),
+    SizedBox(width: 10),
+    Text(
+      'Rosso',
+      style: TextStyle(
+        fontSize: 20,
+        color: Colors.red,
+      ),
+    ),
+  ],
+),'''),
+            ),
             const SizedBox(height: 40),
             // Titolo della sezione per TextAlign
             sectionTitle("TextAlign"),
@@ -285,6 +451,15 @@ class Tutorial8 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  "Testo centrato",
+  textAlign: TextAlign.center,
+  style: TextStyle(fontSize: 20),
+),'''),
+            ),
             const SizedBox(height: 20),
             // Esempio di utilizzo di TextAlign.start
             propertyExample(
@@ -297,6 +472,15 @@ class Tutorial8 extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  "Testo allineato a sinistra",
+  textAlign: TextAlign.start,
+  style: TextStyle(fontSize: 20),
+),'''),
             ),
             const SizedBox(height: 20),
             // Esempio di utilizzo di TextAlign.end
@@ -312,6 +496,16 @@ class Tutorial8 extends StatelessWidget {
               ),
             ),
             propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  "Testo allineato a destra",
+  textAlign: TextAlign.end,
+  style: TextStyle(fontSize: 20),
+),'''),
+            ),
+            const SizedBox(height: 20),
+            propertyExample(
               "TextAlign.justify",
               Container(
                 padding: const EdgeInsets.all(8.0),
@@ -321,6 +515,15 @@ class Tutorial8 extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Text(
+  "Testo giustificato",
+  textAlign: TextAlign.justify,
+  style: TextStyle(fontSize: 20),
+),'''),
             ),
             const SizedBox(height: 40),
             // Aggiungi altre proprietà e esempi di stile qui...

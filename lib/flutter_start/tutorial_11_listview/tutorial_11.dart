@@ -41,6 +41,16 @@ class Tutorial11 extends StatelessWidget {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+ListView(
+  children: List.generate(
+    days.length,
+    (index) => DayOfTheMonth(days[index]),
+  ),
+),'''),
+            ),
             const SizedBox(height: 20),
             sectionTitle("ListView.builder"),
             const SizedBox(height: 10),
@@ -56,6 +66,14 @@ class Tutorial11 extends StatelessWidget {
                   itemBuilder: (context, index) => DayOfTheMonth(days[index]),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+ListView.builder(
+  itemCount: days.length,
+  itemBuilder: (context, index) => DayOfTheMonth(days[index]),
+),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("ListView.separated"),
@@ -76,6 +94,17 @@ class Tutorial11 extends StatelessWidget {
                       : const Divider(color: Colors.blue),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+ListView.separated(
+  itemCount: days.length,
+  itemBuilder: (context, index) => DayOfTheMonth(days[index]),
+  separatorBuilder: (context, index) => index % 2 == 0
+      ? const Divider(color: Colors.pink)
+      : const Divider(color: Colors.blue),
+),'''),
             ),
           ],
         ),

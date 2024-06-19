@@ -11,9 +11,13 @@ import 'package:flutter_tutorial/flutter_start/tutorial_6_containers/tutorial_6.
 import 'package:flutter_tutorial/flutter_start/tutorial_7_card/tutorial_7.dart';
 import 'package:flutter_tutorial/flutter_start/tutorial_8_column_row/tutorial_8.dart';
 import 'package:flutter_tutorial/flutter_start/tutorial_9_stack/tutorial_9.dart';
-import 'home_page.dart';
+import 'package:flutter_tutorial/pages/flutter_start.dart';
+import 'pages/home_page.dart';
+import 'pages/not_found_page.dart'; // Importa la pagina NotFoundPage
 
 class CompleteFlutterTutorialApp extends StatelessWidget {
+  const CompleteFlutterTutorialApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     // MaterialApp è il widget radice per la maggior parte delle app Flutter
@@ -33,6 +37,12 @@ class CompleteFlutterTutorialApp extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: {
+        '/dart_begin': (context) => const NotFoundPage(),
+        '/flutter_start': (context) => const FlutterStartPage(),
+        '/flutter_advanced': (context) => const NotFoundPage(),
+        '/flutter_architecture': (context) => const NotFoundPage(),
+        '/flutter_focus': (context) => const NotFoundPage(),
+        '/flutter_pro': (context) => const NotFoundPage(),
         '/tutorial_0': (context) => const Tutorial0(),
         '/tutorial_1': (context) => const Tutorial1(
               "Componente a cui non cambia lo stato.",
@@ -51,6 +61,9 @@ class CompleteFlutterTutorialApp extends StatelessWidget {
         '/tutorial_10': (context) => const Tutorial10(),
         '/tutorial_11': (context) => const Tutorial11(),
       },
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (context) => const NotFoundPage(),
+      ),
     );
   }
 }

@@ -134,7 +134,7 @@ borderRadius: BorderRadius.circular(16),
             const SizedBox(height: 10),
             explanationText(
               "SizedBox è un widget semplice che viene utilizzato per specificare una dimensione esatta per il suo figlio. "
-              "È utile quando si desidera dare a un widget una dimensione precisa e non ci sono stili da definire.",
+              "È utile quando si desidera dare a un widget una dimensione precisa se non ci sono stili da definire.",
             ),
             propertyExample(
               "Esempio di SizedBox",

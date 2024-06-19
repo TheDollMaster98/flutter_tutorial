@@ -36,28 +36,35 @@ class Tutorial7State extends State<Tutorial7> {
             sectionTitle("Card"),
             const SizedBox(height: 10),
             explanationText(
-              "Card è un widget utilizzato per creare un contenitore con un bordo arrotondato e un'ombra. "
-              "È utile per visualizzare informazioni in modo ordinato e facilmente leggibile.",
-            ),
+                "Viene utilizzato per creare un contenitore con un bordo arrotondato e un'ombra."),
             propertyExample(
               "Esempio di Card",
               Card(
-                child: InkWell(
-                  onTap: () {
-                    incrementCounter();
-                  },
-                  splashColor: Colors.purpleAccent.shade100,
-                  child: Container(
-                    width: 200,
-                    height: 200,
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Card $counter",
-                      style: const TextStyle(fontSize: 20),
-                    ),
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    "Card normale",
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Card(
+  child: Container(
+    width: 200,
+    height: 200,
+    alignment: Alignment.center,
+    child: Text(
+      "Card \$counter",
+      style: const TextStyle(fontSize: 20),
+    ),
+  ),
+),'''),
             ),
             const SizedBox(height: 20),
             sectionTitle("Proprietà della Card"),
@@ -79,28 +86,64 @@ class Tutorial7State extends State<Tutorial7> {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Card(
+  color: Colors.blue.shade100,
+  child: const Padding(
+    padding: EdgeInsets.all(16.0),
+    child: Text(
+      'Questa è una Card con colore di sfondo.',
+      style: TextStyle(fontSize: 16),
+      textAlign: TextAlign.center,
+    ),
+  ),
+),'''),
+            ),
             const SizedBox(height: 20),
             explanationText(
               "È possibile utilizzare InkWell all'interno della Card per aggiungere un effetto al tocco e gestire gli eventi di tap.",
             ),
+            sectionTitle("Card con InkWell"),
             propertyExample(
-              "Card con InkWell",
+              "Tocca per incrementare il contatore.",
               Card(
                 child: InkWell(
                   onTap: () {
                     incrementCounter();
                   },
                   splashColor: Colors.purpleAccent.shade100,
-                  child: const Padding(
-                    padding: EdgeInsets.all(16.0),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
                     child: Text(
-                      'Tocca per incrementare il contatore.',
-                      style: TextStyle(fontSize: 16),
+                      'Click: $counter',
+                      style: const TextStyle(fontSize: 16),
                       textAlign: TextAlign.center,
                     ),
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Card(
+  child: InkWell(
+    onTap: () {
+      incrementCounter();
+    },
+    splashColor: Colors.purpleAccent.shade100,
+    child: const Padding(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'Tocca per incrementare il contatore.',
+        style: TextStyle(fontSize: 16),
+        textAlign: TextAlign.center,
+      ),
+    ),
+  ),
+),'''),
             ),
             const SizedBox(height: 20),
             explanationText(
@@ -119,6 +162,21 @@ class Tutorial7State extends State<Tutorial7> {
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Card(
+  elevation: 10,
+  child: const Padding(
+    padding: EdgeInsets.all(16.0),
+    child: Text(
+      'Questa è una Card con elevazione.',
+      style: TextStyle(fontSize: 16),
+      textAlign: TextAlign.center,
+    ),
+  ),
+),'''),
             ),
             const SizedBox(height: 20),
             explanationText(
@@ -140,6 +198,23 @@ class Tutorial7State extends State<Tutorial7> {
                 ),
               ),
             ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Card(
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+  child: const Padding(
+    padding: EdgeInsets.all(16.0),
+    child: Text(
+      'Questa è una Card con bordi arrotondati.',
+      style: TextStyle(fontSize: 16),
+      textAlign: TextAlign.center,
+    ),
+  ),
+),'''),
+            ),
             const SizedBox(height: 20),
             explanationText(
               "È possibile aggiungere margini alla Card utilizzando un Container.",
@@ -159,6 +234,23 @@ class Tutorial7State extends State<Tutorial7> {
                   ),
                 ),
               ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Container(
+  margin: const EdgeInsets.all(16.0),
+  child: const Card(
+    child: Padding(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'Questa è una Card con margini esterni.',
+        style: TextStyle(fontSize: 16),
+        textAlign: TextAlign.center,
+      ),
+    ),
+  ),
+),'''),
             ),
           ],
         ),
