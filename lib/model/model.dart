@@ -14,13 +14,13 @@ final List<Map<String, String>> sections = [
   {
     'title': 'Flutter Advanced',
     'description':
-        'Sviluppa app complesse con più schermate, salva dati in locale e gestisci lo stato globale con il BLoC.',
+        'App con più schermate, salva dati in locale e gestisci lo stato globale con il BLoC.',
     'route': '/flutter_advanced'
   },
   {
     'title': 'Flutter Architecture',
     'description':
-        'Approfondisci i concetti di Mapper, Provider, Repository e BLoC con un esperto Flutter.',
+        'Approfondisci i concetti di Mapper, Provider, Repository e BLoC.',
     'route': '/flutter_architecture'
   },
   {
@@ -32,7 +32,7 @@ final List<Map<String, String>> sections = [
   {
     'title': 'Flutter Pro',
     'description':
-        'Pubblicazione sugli store, plugin nativi, testing, responsive, animazioni, multilingue per veri professionisti!',
+        'Pubblicazione sugli store, plugin nativi, testing, responsive, animazioni e multilingue,',
     'route': '/flutter_pro'
   }
 ];
