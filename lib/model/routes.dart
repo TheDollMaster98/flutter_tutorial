@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0_intro/flutter_start_tutorial_0.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_10_list/tutorial_10.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_11_listview/tutorial_11.dart';
+import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_12_gridview/flutter_start_tutorial_12.dart';
+import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_13_pageview/flutter_start_tutorial_13.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_1_stateless/tutorial_1.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_2_stateful/tutorial_2.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_3_buttons/tutorial_3.dart';
@@ -42,6 +44,8 @@ Map<String, WidgetBuilder> routes = {
   '/tutorial_9': (context) => const FlutterStartTutorial9(),
   '/tutorial_10': (context) => const FlutterStartTutorial10(),
   '/tutorial_11': (context) => const FlutterStartTutorial11(),
+  '/tutorial_12': (context) => const FlutterStartTutorial12(),
+  '/tutorial_13': (context) => const FlutterStartTutorial13(),
 };
 
 Route<dynamic> onUnknownRoute(RouteSettings settings) {

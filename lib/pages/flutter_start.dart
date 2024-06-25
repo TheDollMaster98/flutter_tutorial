@@ -83,6 +83,18 @@ class FlutterStartPage extends StatelessWidget {
               Navigator.pushNamed(context, '/tutorial_11');
             },
           ),
+          ListTile(
+            title: const Text('Tutorial 12: GridView'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_12');
+            },
+          ),
+          ListTile(
+            title: const Text('Tutorial 13: PageView e Indicatori'),
+            onTap: () {
+              Navigator.pushNamed(context, '/tutorial_13');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),

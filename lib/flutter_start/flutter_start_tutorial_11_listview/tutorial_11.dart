@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/model/model.dart';
+import 'package:flutter_tutorial/model/day_model.dart';
 import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
 class FlutterStartTutorial11 extends StatelessWidget {
