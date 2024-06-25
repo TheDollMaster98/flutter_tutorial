@@ -26,7 +26,7 @@ class FlutterStartTutorial14 extends StatelessWidget {
               "Il Login Form è un esempio comune di form che include campi per l'inserimento dell'email e della password.",
             ),
             const SizedBox(height: 10),
-            propertyExample("Esempio di Login Form", LoginForm()),
+            propertyExample("Esempio di Login Form", const LoginForm()),
             propertyExample(
               "Codice Login Form:",
               const Text('''
