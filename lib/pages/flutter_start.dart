@@ -14,85 +14,91 @@ class FlutterStartPage extends StatelessWidget {
           ListTile(
             title: const Text('Tutorial 0: Intro'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_0');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_0');
             },
           ),
           ListTile(
             title: const Text('Tutorial 1: Stateless Component'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_1');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_1');
             },
           ),
           ListTile(
             title: const Text('Tutorial 2: Stateful Component'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_2');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_2');
             },
           ),
           ListTile(
             title: const Text('Tutorial 3: Bottoni e InkWell'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_3');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_3');
             },
           ),
           ListTile(
             title: const Text('Tutorial 4: Colori'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_4');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_4');
             },
           ),
           ListTile(
             title: const Text('Tutorial 5: Immagini'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_5');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_5');
             },
           ),
           ListTile(
             title: const Text('Tutorial 6: Contenitori'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_6');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_6');
             },
           ),
           ListTile(
             title: const Text('Tutorial 7: Card'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_7');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_7');
             },
           ),
           ListTile(
             title: const Text('Tutorial 8: Column & Row'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_8');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_8');
             },
           ),
           ListTile(
             title: const Text('Tutorial 9: Stack'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_9');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_9');
             },
           ),
           ListTile(
             title: const Text('Tutorial 10: List, SafeArea e Scroll'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_10');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_10');
             },
           ),
           ListTile(
             title: const Text('Tutorial 11: ListView'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_11');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_11');
             },
           ),
           ListTile(
             title: const Text('Tutorial 12: GridView'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_12');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_12');
             },
           ),
           ListTile(
             title: const Text('Tutorial 13: PageView e Indicatori'),
             onTap: () {
-              Navigator.pushNamed(context, '/tutorial_13');
+              Navigator.pushNamed(context, '/flutter_start_tutorial_13');
+            },
+          ),
+          ListTile(
+            title: const Text('Tutorial 14: Forms'),
+            onTap: () {
+              Navigator.pushNamed(context, '/flutter_start_tutorial_14');
             },
           ),
           // Aggiungi altre voci di tutorial qui...
