@@ -13,7 +13,7 @@ class FlutterStartTutorial14 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text("Forms in Flutter 3")),
+        title: const Center(child: Text("Forms")),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
