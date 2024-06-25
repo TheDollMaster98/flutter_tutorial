@@ -72,7 +72,7 @@ class FlutterStartPage extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Tutorial 10: SafeArea e Scroll'),
+            title: const Text('Tutorial 10: List, SafeArea e Scroll'),
             onTap: () {
               Navigator.pushNamed(context, '/tutorial_10');
             },

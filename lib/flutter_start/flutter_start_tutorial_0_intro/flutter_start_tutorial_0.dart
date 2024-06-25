@@ -158,6 +158,7 @@ class HomePage extends StatelessWidget {
           "Tutorial 1",
           style: TextStyle(fontSize: 20, color: Colors.purple),
         ),
+        //al posto di Center():
         centerTitle: true,
       ),
       body: Center(

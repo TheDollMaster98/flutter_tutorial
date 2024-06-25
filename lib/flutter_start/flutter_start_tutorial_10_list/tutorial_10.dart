@@ -8,13 +8,144 @@ class FlutterStartTutorial10 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SafeArea e Scroll'),
+        title: const Text('List, SafeArea e Scroll'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            // Sezione per List
+            sectionTitle("Lista con List"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Utilizza List per creare una lista di widget. Questo metodo è utile quando si ha un numero fisso e limitato di elementi.",
+            ),
+            propertyExample(
+              "Esempio di List",
+              Column(
+                children: [
+                  Text('Elemento 1', style: TextStyle(fontSize: 16)),
+                  Text('Elemento 2', style: TextStyle(fontSize: 16)),
+                  Text('Elemento 3', style: TextStyle(fontSize: 16)),
+                ],
+              ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Column(
+  children: [
+    Text('Elemento 1', style: TextStyle(fontSize: 16)),
+    Text('Elemento 2', style: TextStyle(fontSize: 16)),
+    Text('Elemento 3', style: TextStyle(fontSize: 16)),
+  ],
+),'''),
+            ),
+            const SizedBox(height: 20),
+
+            // Sezione per List.generate
+            sectionTitle("Lista con List.generate"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Utilizza List.generate per creare una lista di widget dinamicamente. Questo metodo è utile quando si ha un numero variabile di elementi.",
+            ),
+            propertyExample(
+              "Esempio di List.generate",
+              Column(
+                children: List.generate(
+                  5,
+                  (index) => Text('Elemento $index',
+                      style: const TextStyle(fontSize: 16)),
+                ),
+              ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Column(
+  children: List.generate(
+    5,
+    (index) => Text('Elemento \$index',
+        style: const TextStyle(fontSize: 16)),
+  ),
+),'''),
+            ),
+            const SizedBox(height: 20),
+
+            // Sezione per ListView.builder
+            sectionTitle("ListView.builder"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Utilizza ListView.builder per creare la lista di widget. Questo metodo è più efficiente perché crea solo i widget che sono attualmente visibili sullo schermo.",
+            ),
+            propertyExample(
+              "Esempio di ListView.builder",
+              SizedBox(
+                height: 200,
+                child: ListView.builder(
+                  itemCount: 20,
+                  itemBuilder: (context, index) => ListTile(
+                    title: Text('Elemento $index'),
+                  ),
+                ),
+              ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+SizedBox(
+  height: 200,
+  child: ListView.builder(
+    itemCount: 20,
+    itemBuilder: (context, index) => ListTile(
+      title: Text('Elemento \$index'),
+    ),
+  ),
+),'''),
+            ),
+            const SizedBox(height: 20),
+
+            // Sezione per ListView.separated
+            sectionTitle("ListView.separated"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Utilizza ListView.separated per creare una lista di widget con divisori tra gli elementi. Puoi personalizzare i divisori per aggiungere logica o stile.",
+            ),
+            propertyExample(
+              "Esempio di ListView.separated",
+              SizedBox(
+                height: 200,
+                child: ListView.separated(
+                  itemCount: 20,
+                  itemBuilder: (context, index) => ListTile(
+                    title: Text('Elemento $index'),
+                  ),
+                  separatorBuilder: (context, index) => Divider(
+                    color: index % 2 == 0 ? Colors.blue : Colors.red,
+                  ),
+                ),
+              ),
+            ),
+            propertyExample(
+              "Codice:",
+              const Text('''
+SizedBox(
+  height: 200,
+  child: ListView.separated(
+    itemCount: 20,
+    itemBuilder: (context, index) => ListTile(
+      title: Text('Elemento \$index'),
+    ),
+    separatorBuilder: (context, index) => Divider(
+      color: index % 2 == 0 ? Colors.blue : Colors.red,
+    ),
+  ),
+),'''),
+            ),
+            const SizedBox(height: 20),
+
+            // Sezione per SafeArea
             sectionTitle("SafeArea"),
             const SizedBox(height: 10),
             explanationText(
@@ -53,6 +184,8 @@ SafeArea(
 ),'''),
             ),
             const SizedBox(height: 20),
+
+            // Sezione per SingleChildScrollView
             sectionTitle("SingleChildScrollView"),
             const SizedBox(height: 10),
             explanationText(
@@ -99,6 +232,8 @@ Container(
 ),'''),
             ),
             const SizedBox(height: 20),
+
+            // Sezione per Esempio Completo
             sectionTitle("Esempio Completo"),
             const SizedBox(height: 10),
             explanationText(

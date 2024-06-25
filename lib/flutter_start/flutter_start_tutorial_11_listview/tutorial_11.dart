@@ -10,7 +10,6 @@ class FlutterStartTutorial11 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ListView'),
-        backgroundColor: Colors.purpleAccent,
         centerTitle: true, //al posto di Center()
       ),
       body: SingleChildScrollView(
