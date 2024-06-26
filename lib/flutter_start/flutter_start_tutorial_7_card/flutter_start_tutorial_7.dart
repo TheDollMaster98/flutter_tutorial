@@ -21,11 +21,8 @@ class FlutterStartTutorial7State extends State<FlutterStartTutorial7> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            "Card",
-            style: TextStyle(fontSize: 30),
-          ),
+        title: const Text(
+          "Card",
         ),
       ),
       body: SingleChildScrollView(
