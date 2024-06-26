@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0_intro/flutter_start_tutorial_0.dart';
+import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0pt5_widget/flutter_start_tutorial_0pt5.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_10_list/flutter_start_tutorial_10.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_11_listview/flutter_start_tutorial_11.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_12_gridview/flutter_start_tutorial_12.dart';
@@ -37,6 +38,7 @@ Map<String, WidgetBuilder> routes = {
         style: TextStyle(fontSize: 30, color: Colors.pinkAccent),
       ),
   '/flutter_start_tutorial_2': (context) => const FlutterStartTutorial2(20),
+  '/flutter_start_tutorial_0.5': (context) => const FlutterStartTutorial0pt5(),
   '/flutter_start_tutorial_3': (context) => const FlutterStartTutorial3(),
   '/flutter_start_tutorial_4': (context) => const FlutterStartTutorial4(),
   '/flutter_start_tutorial_5': (context) => const FlutterStartTutorial5(),

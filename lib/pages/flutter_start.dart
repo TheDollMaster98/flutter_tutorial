@@ -18,6 +18,12 @@ class FlutterStartPage extends StatelessWidget {
             },
           ),
           ListTile(
+            title: const Text('Tutorial 0.5: Widget Component'),
+            onTap: () {
+              Navigator.pushNamed(context, '/flutter_start_tutorial_0.5');
+            },
+          ),
+          ListTile(
             title: const Text('Tutorial 1: Stateless Component'),
             onTap: () {
               Navigator.pushNamed(context, '/flutter_start_tutorial_1');
@@ -29,6 +35,7 @@ class FlutterStartPage extends StatelessWidget {
               Navigator.pushNamed(context, '/flutter_start_tutorial_2');
             },
           ),
+
           ListTile(
             title: const Text('Tutorial 3: Bottoni e InkWell'),
             onTap: () {

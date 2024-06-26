@@ -10,10 +10,12 @@ class FlutterStartTutorial15 extends StatelessWidget {
         title: const Text('Tab Bar'),
         centerTitle: true,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(16),
-        child: Text("ciao"),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: body(),
       ),
     );
   }
+
+  Widget body() => const Text("ciao");
 }
