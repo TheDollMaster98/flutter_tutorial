@@ -34,7 +34,6 @@ class FlutterStartTutorial15 extends StatelessWidget {
             "- Il TabController personalizzato può essere utilizzato quando si desidera avere un controllo più preciso sul comportamento delle schede, come la gestione degli eventi di cambio scheda o la sincronizzazione con altre parti dell'app.\n"
             "- Utilizzando il DefaultTabController, non è necessario creare manualmente un TabController.",
           ),
-
           const SizedBox(height: 20),
           sectionTitle("Esempio di TabBar e TabBarView"),
           const SizedBox(height: 10),

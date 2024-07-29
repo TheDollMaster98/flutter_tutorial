@@ -150,6 +150,52 @@ Future<Widget> _loadImageFromFile() async {
   );
 }'''),
             ),
+            const SizedBox(height: 20),
+            sectionTitle("Immagini con DecorationImage"),
+            const SizedBox(height: 10),
+            explanationText(
+              "DecorationImage viene utilizzato per decorare un Container con un'immagine di sfondo. È possibile specificare come l'immagine deve adattarsi al Container utilizzando BoxFit e applicare filtri di colore.",
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Immagine con DecorationImage",
+              Container(
+                width: 300,
+                height: 200,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        "https://images.unsplash.com/photo-1605517021366-1b0393fdb50a?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+                    fit: BoxFit.cover,
+                    colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.5),
+                      BlendMode.darken,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice:",
+              const Text('''
+Container(
+  width: 300,
+  height: 200,
+  decoration: BoxDecoration(
+    image: DecorationImage(
+      image: NetworkImage(
+        "https://link.com"
+      ),
+      fit: BoxFit.cover,
+      colorFilter: ColorFilter.mode(
+        Colors.black.withOpacity(0.5),
+        BlendMode.darken,
+      ),
+    ),
+  ),
+),'''),
+            ),
           ],
         ),
       ),
