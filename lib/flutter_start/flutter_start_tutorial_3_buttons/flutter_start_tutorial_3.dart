@@ -172,8 +172,85 @@ InkWell(
   ),
 ),'''),
             ),
+            const SizedBox(height: 20),
+            // Sezione del FloatingActionButton
+            sectionTitle("FloatingActionButton"),
+            explanationText(
+              "Il `FloatingActionButton` (FAB) è un pulsante circolare che rappresenta l'azione principale della tua applicazione. "
+              "Il FAB è solitamente posizionato nella parte inferiore destra dello schermo usando la proprietà `floatingActionButton` dello `Scaffold`. "
+              "Questo pulsante è progettato per attirare l'attenzione e viene utilizzato per azioni principali come l'aggiunta di un nuovo elemento, l'invio di un messaggio, ecc.",
+            ),
+            const SizedBox(height: 10),
+            // Esempio di FloatingActionButton
+            propertyExample(
+              "FloatingActionButton",
+              FloatingActionButton(
+                onPressed: onButtonPressed,
+                child: const Icon(Icons.add),
+              ),
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice FloatingActionButton:",
+              const Text('''
+FloatingActionButton(
+  onPressed: onButtonPressed,
+  child: const Icon(Icons.add),
+),'''),
+            ),
+            const SizedBox(height: 20),
+            // Spiegazione dell'uso di FloatingActionButton.extended
+            sectionTitle("FloatingActionButton Esteso"),
+            explanationText(
+              "Il `FloatingActionButton.extended` è una versione estesa del FAB, che consente di aggiungere un'etichetta di testo accanto all'icona. "
+              "Questo pulsante è utile quando vuoi che l'azione principale sia più descrittiva o quando vuoi offrire più contesto sull'azione che verrà eseguita.",
+            ),
+            const SizedBox(height: 10),
+            // Esempio di FloatingActionButton.extended
+            propertyExample(
+              "FloatingActionButton.extended",
+              FloatingActionButton.extended(
+                backgroundColor: Colors.red.shade100,
+                foregroundColor: Colors.red.shade900,
+                splashColor: Colors.red.shade200,
+                icon: const Icon(Icons.add),
+                label: const Text("Email"),
+                onPressed: onButtonPressed,
+              ),
+            ),
+            const SizedBox(height: 10),
+            propertyExample(
+              "Codice FloatingActionButton.extended:",
+              const Text('''
+ return Scaffold(
+      appBar: AppBar(
+        title: Text("FAB"),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Text("Empty."),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.red.shade100,
+        foregroundColor: Colors.red.shade900,
+        splashColor: Colors.red.shade200,
+        icon: Icon(Icons.add),
+        label: Text("Email"),
+        onPressed: () {},
+      ),
+    );'''),
+            ),
           ],
         ),
+      ),
+      // Posizionamento del FloatingActionButton
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.red.shade100,
+        foregroundColor: Colors.red.shade900,
+        splashColor: Colors.red.shade200,
+        icon: const Icon(Icons.add),
+        label: const Text("Email"),
+        onPressed: onButtonPressed,
       ),
     );
   }
