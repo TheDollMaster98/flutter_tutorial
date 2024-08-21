@@ -23,7 +23,7 @@ class FlutterStartTutorial10 extends StatelessWidget {
             ),
             propertyExample(
               "Esempio di List",
-              Column(
+              const Column(
                 children: [
                   Text('Elemento 1', style: TextStyle(fontSize: 16)),
                   Text('Elemento 2', style: TextStyle(fontSize: 16)),

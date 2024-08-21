@@ -19,7 +19,7 @@ class FlutterStartTutorial1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: TextHeadline(),
+        title: const TextHeadline(),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
