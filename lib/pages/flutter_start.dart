@@ -120,6 +120,12 @@ class FlutterStartPage extends StatelessWidget {
               Navigator.pushNamed(context, '/flutter_start_tutorial_16');
             },
           ),
+          ListTile(
+            title: const Text('Tutorial 17: Dialog'),
+            onTap: () {
+              Navigator.pushNamed(context, '/flutter_start_tutorial_17');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),
