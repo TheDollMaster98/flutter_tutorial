@@ -53,8 +53,14 @@ class FlutterStartTutorial16 extends StatelessWidget {
             title: const Text("Home"),
             leading: const Icon(Icons.home),
             onTap: () {
-              // Sostituisce la pagina corrente con la pagina Home
-              Navigator.pushReplacementNamed(context, '/flutter_start');
+              // Naviga alla home e rimuove tutte le altre pagine dallo stack
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/home_page', // Naviga alla home page
+                (route) => false, // Rimuove tutte le altre pagine dallo stack
+              );
+              // Poi naviga alla pagina FlutterStart
+              Navigator.pushNamed(context, '/flutter_start');
             },
           ),
           ListTile(

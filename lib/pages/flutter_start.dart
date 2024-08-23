@@ -14,116 +14,191 @@ class FlutterStartPage extends StatelessWidget {
           ListTile(
             title: const Text('Tutorial 0: Intro'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_0');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_0',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 0.5: Widget Component'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_0.5');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_0.5',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 1: Stateless Component'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_1');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_1',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 2: Stateful Component'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_2');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_2',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
-
           ListTile(
             title: const Text('Tutorial 3: Bottoni e InkWell'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_3');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_3',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 4: Colori'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_4');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_4',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 5: Immagini'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_5');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_5',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 6: Contenitori'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_6');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_6',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 7: Card'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_7');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_7',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 8: Column & Row'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_8');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_8',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 9: Stack'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_9');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_9',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 10: List, SafeArea e Scroll'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_10');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_10',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 11: ListView'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_11');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_11',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 12: GridView'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_12');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_12',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 13: PageView e Indicatori'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_13');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_13',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 14: Forms'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_14');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_14',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 15: Tab Bar'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_15');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_15',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 16: Drawer'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_16');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_16',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           ListTile(
             title: const Text('Tutorial 17: Dialog'),
             onTap: () {
-              Navigator.pushNamed(context, '/flutter_start_tutorial_17');
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                '/flutter_start_tutorial_17',
+                ModalRoute.withName('/home_page'),
+              );
             },
           ),
           // Aggiungi altre voci di tutorial qui...

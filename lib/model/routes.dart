@@ -20,11 +20,13 @@ import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_8_column_r
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_9_stack/flutter_start_tutorial_9.dart';
 
 import 'package:flutter_tutorial/pages/flutter_start.dart';
+import 'package:flutter_tutorial/pages/home_page.dart';
 import 'package:flutter_tutorial/pages/working_in_progress_page.dart';
 import 'package:flutter_tutorial/pages/not_found_page.dart';
 
 Map<String, WidgetBuilder> routes = {
   //PAGE:
+  '/home_page': (context) => const HomePage(),
   '/dart_begin': (context) => const WorkingInProgressPage(),
   '/flutter_start': (context) => const FlutterStartPage(),
   '/flutter_advanced': (context) => const WorkingInProgressPage(),
