@@ -50,18 +50,19 @@ class FlutterStartTutorial16 extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {
-              Navigator.pushNamed(context, '/flutter_start');
-            },
             title: const Text("Home"),
             leading: const Icon(Icons.home),
+            onTap: () {
+              // Sostituisce la pagina corrente con la pagina Home
+              Navigator.pushReplacementNamed(context, '/flutter_start');
+            },
           ),
           ListTile(
+            title: const Text("Profilo"),
+            leading: const Icon(Icons.person),
             onTap: () {
               Navigator.pop(context);
             },
-            title: const Text("Profilo"),
-            leading: const Icon(Icons.person),
           ),
         ],
       ),
@@ -97,7 +98,7 @@ class FlutterStartTutorial16 extends StatelessWidget {
                 Container(
                   color: Colors.grey[200],
                   child: SizedBox(
-                    height: 200, // Altezza definita per il Drawer
+                    height: 200,
                     child: Drawer(
                       child: ListView(
                         padding: const EdgeInsets.all(0),
@@ -217,7 +218,7 @@ Drawer(
                 Container(
                   color: Colors.grey[200],
                   child: SizedBox(
-                    height: 200, // Altezza definita per il Drawer
+                    height: 200,
                     child: Drawer(
                       child: Container(
                         color: Colors.blueGrey,
