@@ -13,7 +13,6 @@ class FlutterStartTutorial3State extends State<FlutterStartTutorial3> {
 
   // Questo è un metodo che viene chiamato quando il pulsante viene premuto.
   void onButtonPressed() {
-    print("Pressed");
     setState(() {
       _isTapped = !_isTapped;
     });
@@ -185,6 +184,7 @@ InkWell(
             propertyExample(
               "FloatingActionButton",
               FloatingActionButton(
+                heroTag: "floatingButton1", // Tag univoco
                 onPressed: onButtonPressed,
                 child: const Icon(Icons.add),
               ),
@@ -194,6 +194,7 @@ InkWell(
               "Codice FloatingActionButton:",
               const Text('''
 FloatingActionButton(
+  heroTag: "floatingButton1",
   onPressed: onButtonPressed,
   child: const Icon(Icons.add),
 ),'''),
@@ -210,6 +211,7 @@ FloatingActionButton(
             propertyExample(
               "FloatingActionButton.extended",
               FloatingActionButton.extended(
+                heroTag: "floatingButton2", // Tag univoco
                 backgroundColor: Colors.red.shade100,
                 foregroundColor: Colors.red.shade900,
                 splashColor: Colors.red.shade200,
@@ -222,29 +224,22 @@ FloatingActionButton(
             propertyExample(
               "Codice FloatingActionButton.extended:",
               const Text('''
- return Scaffold(
-      appBar: AppBar(
-        title: Text("FAB"),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text("Empty."),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: Colors.red.shade100,
-        foregroundColor: Colors.red.shade900,
-        splashColor: Colors.red.shade200,
-        icon: Icon(Icons.add),
-        label: Text("Email"),
-        onPressed: () {},
-      ),
-    );'''),
+FloatingActionButton.extended(
+  heroTag: "floatingButton2", // Tag univoco per evitare conflitti con altri FloatingActionButton
+  backgroundColor: Colors.red.shade100,
+  foregroundColor: Colors.red.shade900,
+  splashColor: Colors.red.shade200,
+  icon: const Icon(Icons.add),
+  label: const Text("Email"),
+  onPressed: onButtonPressed,
+),'''),
             ),
           ],
         ),
       ),
       // Posizionamento del FloatingActionButton
       floatingActionButton: FloatingActionButton.extended(
+        heroTag: "floatingButton3", // Tag univoco
         backgroundColor: Colors.red.shade100,
         foregroundColor: Colors.red.shade900,
         splashColor: Colors.red.shade200,

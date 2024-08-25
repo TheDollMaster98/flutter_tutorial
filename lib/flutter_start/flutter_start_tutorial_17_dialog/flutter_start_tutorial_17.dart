@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
+import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
 class FlutterStartTutorial17 extends StatelessWidget {
   const FlutterStartTutorial17({super.key});
 
+  // Mostra un dialogo personalizzato per l'invio di email
   void showEmailDialog(BuildContext context) {
-    // context: è dentro il metodo build, non avendolo lo passo nella funzione.
-    // builder: funzione che prende un build context
     showDialog(
       context: context,
-      // Il container non prende tutto, ma è come se fosse racchiuso in una safeArea
-      // mostrando la parte sopra e sotto
       builder: (context) => Dialog(
-        //se uso bgColor del dialog, i bordi si smussano:
         backgroundColor: Colors.white,
         child: Container(
           padding: const EdgeInsets.all(16),
           child: Column(
-            // metto axisSize per fargli prendere solo lo spazio che gli serve
-            // altezza asse y:
             mainAxisSize: MainAxisSize.min,
-            //allineo a sx:
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
@@ -31,8 +24,6 @@ class FlutterStartTutorial17 extends StatelessWidget {
                 ),
               ),
               const Divider(),
-              // gli sto dicendo min e max di righe su quale l'utente può scrivere
-              // che siano pari a 5, in caso scrolla giù
               const TextField(
                 minLines: 3,
                 maxLines: 5,
@@ -47,14 +38,11 @@ class FlutterStartTutorial17 extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ButtonStyle(
-                      // Posso specificare per ogni tipologia di stato il colore corrispettivo
-                      // es. hover, focus, normale, ecc.
-                      backgroundColor:
-                          MaterialStatePropertyAll(Colors.red.shade100),
-                      // idem come su, ma per il testo:
-                      foregroundColor:
-                          MaterialStatePropertyAll(Colors.red.shade900)),
-                  // chiudo la modale:
+                    backgroundColor:
+                        MaterialStatePropertyAll(Colors.red.shade100),
+                    foregroundColor:
+                        MaterialStatePropertyAll(Colors.red.shade900),
+                  ),
                   onPressed: () => Navigator.pop(context),
                   child: const Text("Spedisci Email"),
                 ),
@@ -66,12 +54,45 @@ class FlutterStartTutorial17 extends StatelessWidget {
     );
   }
 
+  // Mostra un SimpleDialog con opzioni
+  void showSimple(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => SimpleDialog(
+        title: const Text("Scegli la tipologia di email da mandare"),
+        children: [
+          SimpleDialogOption(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("Singolo destinatario"),
+          ),
+          SimpleDialogOption(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("Multipli destinatari"),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Mostra un AlertDialog per errori di invio email
   void showEmailError(BuildContext context) {
     showDialog(
-        context: context,
-        builder: (context) => const AlertDialog(
-              title: Text("Il servizio non è attualmente disponibile!"),
-            ));
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text("Gmail è down"),
+        content: const Text("Il servizio non è attualmente disponibile!"),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("Cancella"),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("OK"),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -87,15 +108,148 @@ class FlutterStartTutorial17 extends StatelessWidget {
         splashColor: Colors.red.shade200,
         icon: const Icon(Icons.add),
         label: const Text("Email"),
-        // onPressed: () => showEmailDialog(context),
-        onPressed: () => showEmailError(context),
+        onPressed: () => showSimple(context),
       ),
-      body: Center(child: body()),
+      body: Center(child: buildBody(context)),
+    );
+  }
+
+  Widget buildBody(BuildContext context) {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          sectionTitle("Dialog"),
+          const SizedBox(height: 10),
+          explanationText(
+            "I Dialog sono finestre di dialogo che appaiono sopra il contenuto principale della schermata. "
+            "Sono utilizzati per richiedere all'utente una decisione o un'azione, o per mostrare informazioni importanti.",
+          ),
+          const SizedBox(height: 20),
+          sectionTitle("Esempio di `Dialog` Personalizzato"),
+          const SizedBox(height: 10),
+          propertyExample(
+            "Dialog Personalizzato",
+            ElevatedButton(
+              onPressed: () => showEmailDialog(context),
+              child: const Text("Mostra Dialog Personalizzato"),
+            ),
+          ),
+          propertyExample(
+            "Codice Dialog Personalizzato:",
+            const Text('''
+showDialog(
+  context: context,
+  builder: (context) => Dialog(
+    backgroundColor: Colors.white,
+    child: Container(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Componi la tua email",
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const Divider(),
+          const TextField(
+            minLines: 3,
+            maxLines: 5,
+            decoration: InputDecoration(
+              hintText: "Il tuo messaggio",
+              hintStyle: TextStyle(color: Colors.grey),
+              border: InputBorder.none,
+            ),
+          ),
+          const Divider(),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.red.shade100),
+                foregroundColor: MaterialStatePropertyAll(Colors.red.shade900),
+              ),
+              onPressed: () => Navigator.pop(context),
+              child: const Text("Spedisci Email"),
+            ),
+          )
+        ],
+      ),
+    ),
+  ),
+);
+'''),
+          ),
+          const SizedBox(height: 20),
+          sectionTitle("Esempio di `SimpleDialog`"),
+          const SizedBox(height: 10),
+          propertyExample(
+            "SimpleDialog",
+            ElevatedButton(
+              onPressed: () => showSimple(context),
+              child: const Text("Mostra SimpleDialog"),
+            ),
+          ),
+          propertyExample(
+            "Codice SimpleDialog:",
+            const Text('''
+showDialog(
+  context: context,
+  builder: (context) => SimpleDialog(
+    title: const Text("Scegli la tipologia di email da mandare"),
+    children: [
+      SimpleDialogOption(
+        onPressed: () => Navigator.pop(context),
+        child: const Text("Singolo destinatario"),
+      ),
+      SimpleDialogOption(
+        onPressed: () => Navigator.pop(context),
+        child: const Text("Multipli destinatari"),
+      ),
+    ],
+  ),
+);
+'''),
+          ),
+          const SizedBox(height: 20),
+          sectionTitle("Esempio di `AlertDialog`"),
+          const SizedBox(height: 10),
+          propertyExample(
+            "AlertDialog",
+            ElevatedButton(
+              onPressed: () => showEmailError(context),
+              child: const Text("Mostra AlertDialog"),
+            ),
+          ),
+          propertyExample(
+            "Codice AlertDialog:",
+            const Text('''
+showDialog(
+  context: context,
+  builder: (context) => AlertDialog(
+    title: const Text("Gmail è down"),
+    content: const Text("Il servizio non è attualmente disponibile!"),
+    actions: [
+      TextButton(
+        onPressed: () => Navigator.pop(context),
+        child: const Text("Cancella"),
+      ),
+      TextButton(
+        onPressed: () => Navigator.pop(context),
+        child: const Text("OK"),
+      ),
+    ],
+  ),
+);
+'''),
+          ),
+        ],
+      ),
     );
   }
 }
-
-Widget body() => const Text(
-      "Empty.",
-      style: TextStyle(fontSize: 32),
-    );
