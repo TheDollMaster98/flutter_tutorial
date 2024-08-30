@@ -19,10 +19,10 @@ import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_7_card/flu
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_8_column_row/flutter_start_tutorial_8.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_9_stack/flutter_start_tutorial_9.dart';
 
-import 'package:flutter_tutorial/pages/flutter_start.dart';
-import 'package:flutter_tutorial/pages/home_page.dart';
-import 'package:flutter_tutorial/pages/working_in_progress_page.dart';
-import 'package:flutter_tutorial/pages/not_found_page.dart';
+import 'package:flutter_tutorial/intro_pages/flutter_start.dart';
+import 'package:flutter_tutorial/intro_pages/home_page.dart';
+import 'package:flutter_tutorial/intro_pages/working_in_progress_page.dart';
+import 'package:flutter_tutorial/intro_pages/not_found_page.dart';
 
 Map<String, WidgetBuilder> routes = {
   //PAGE:
