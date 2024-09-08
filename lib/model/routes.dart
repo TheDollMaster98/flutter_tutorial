@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/dart_begin/type/dart_type.dart';
+// DART START:
+import 'package:flutter_tutorial/intro_pages/dart_start.dart';
+//FLUTTER START:
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0_intro/flutter_start_tutorial_0.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0pt5_widget/flutter_start_tutorial_0pt5.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_10_list/flutter_start_tutorial_10.dart';
@@ -18,7 +22,7 @@ import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_6_containe
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_7_card/flutter_start_tutorial_7.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_8_column_row/flutter_start_tutorial_8.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_9_stack/flutter_start_tutorial_9.dart';
-
+//PAGE:
 import 'package:flutter_tutorial/intro_pages/flutter_start.dart';
 import 'package:flutter_tutorial/intro_pages/home_page.dart';
 import 'package:flutter_tutorial/intro_pages/working_in_progress_page.dart';
@@ -27,12 +31,14 @@ import 'package:flutter_tutorial/intro_pages/not_found_page.dart';
 Map<String, WidgetBuilder> routes = {
   //PAGE:
   '/home_page': (context) => const HomePage(),
-  '/dart_begin': (context) => const WorkingInProgressPage(),
+  '/dart_begin': (context) => const DartStartPage(),
   '/flutter_start': (context) => const FlutterStartPage(),
   '/flutter_advanced': (context) => const WorkingInProgressPage(),
   '/flutter_architecture': (context) => const WorkingInProgressPage(),
   '/flutter_focus': (context) => const WorkingInProgressPage(),
   '/flutter_pro': (context) => const WorkingInProgressPage(),
+  // DART START:
+  '/dart_type': (context) => const DartTutorialTypes(),
   //FLUTTER START:
   '/flutter_start_tutorial_0': (context) => const FlutterStartTutorial0(),
   '/flutter_start_tutorial_1': (context) => const FlutterStartTutorial1(
