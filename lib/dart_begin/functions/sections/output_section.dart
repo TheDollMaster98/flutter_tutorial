@@ -19,7 +19,7 @@ class OutputSection extends StatelessWidget {
           "Output:",
           const Text(
             '''
----------------Funzione Fibonacci---------------
+----------------------------Funzione Fibonacci----------------------------
 fibonacci(20) = 6765
 
 ---------------Funzioni con Parametri Opzionali---------------

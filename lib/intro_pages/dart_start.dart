@@ -45,7 +45,7 @@ class DartStartPage extends StatelessWidget {
           ListTile(
             title: const Text('Costruttori di Iterazione'),
             onTap: () {
-              Navigator.pushNamed(context, '/dart_tutorial_selection_loops');
+              Navigator.pushNamed(context, '/dart_tutorial_loops');
             },
           ),
           ListTile(

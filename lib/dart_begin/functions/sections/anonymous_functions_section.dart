@@ -14,7 +14,7 @@ class AnonymousFunctionsSection extends StatelessWidget {
         const SizedBox(height: 10),
         explanationText(
           "Le funzioni anonime, o lambda, sono funzioni che non hanno un nome e vengono utilizzate direttamente dove sono definite. "
-          "Sono comunemente usate come callback o funzioni di ordine superiore.",
+          "\nSono comunemente usate come callback o funzioni di ordine superiore.",
         ),
         const SizedBox(height: 10),
         explanationText(
@@ -26,14 +26,20 @@ class AnonymousFunctionsSection extends StatelessWidget {
           "Esempio di funzione anonima",
           const Text(
             '''
-typedef funcMaggiorenne = bool Function(int);
-
+// Definizione di un typedef per una funzione che accetta un intero e restituisce un booleano.
+typedef isAdult = bool Function(int); 
 void anonymousFunc() {
-  final funcMaggiorenne funcMaggiorenneScope = (int eta) => eta >= 18;
-  printMagg(funcMaggiorenneScope);
+  // Dichiarazione di una funzione anonima e assegnazione a una variabile tipizzata.
+  final isAdult isAdultScope = (int eta) => eta >= 18; 
+  // La funzione anonima verifica se un'età è maggiore o uguale a 18 e restituisce true o false.
+  
+  // Passaggio della funzione anonima come parametro a un'altra funzione.
+  printMagg(isAdultScope); 
 }
 
 void printMagg(bool Function(int) isMaggiorenne, {int eta = 18}) {
+  // Questa funzione riceve una funzione come parametro e un'età opzionale.
+  // Stampa "Maggiorenne" se l'età è maggiore o uguale a 18, altrimenti "Minorenne".
   print(isMaggiorenne(eta) ? "Maggiorenne" : "Minorenne");
 }
             ''',
