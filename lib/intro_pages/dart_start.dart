@@ -29,6 +29,25 @@ class DartStartPage extends StatelessWidget {
               Navigator.pushNamed(context, '/dart_tutorial_modifier');
             },
           ),
+          ListTile(
+            title: const Text('Operatori'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_operators');
+            },
+          ),
+          ListTile(
+            title: const Text('Costruttori di Selezione'),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, '/dart_tutorial_selection_constructs');
+            },
+          ),
+          ListTile(
+            title: const Text('Costruttori di Iterazione'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_selection_loops');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),

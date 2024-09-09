@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
-class FlutterStartTutorial3 extends StatefulWidget {
-  const FlutterStartTutorial3({super.key});
+class FlutterStartTutorialButtons extends StatefulWidget {
+  const FlutterStartTutorialButtons({super.key});
 
   @override
   FlutterStartTutorial3State createState() => FlutterStartTutorial3State();
 }
 
-class FlutterStartTutorial3State extends State<FlutterStartTutorial3> {
+class FlutterStartTutorial3State extends State<FlutterStartTutorialButtons> {
   bool _isTapped = false;
 
   // Questo è un metodo che viene chiamato quando il pulsante viene premuto.

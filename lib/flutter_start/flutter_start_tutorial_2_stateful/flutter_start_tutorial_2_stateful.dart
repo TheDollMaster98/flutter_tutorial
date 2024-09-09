@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/widgets/tutorial_widgets.dart';
 
-class FlutterStartTutorial2 extends StatefulWidget {
+class FlutterStartTutorialStatefulWidget extends StatefulWidget {
   final int value;
-  const FlutterStartTutorial2(this.value, {super.key});
+  const FlutterStartTutorialStatefulWidget(this.value, {super.key});
 
   @override
   State<StatefulWidget> createState() => FlutterStartTutorial2State();
 }
 
-class FlutterStartTutorial2State extends State<FlutterStartTutorial2> {
+class FlutterStartTutorial2State
+    extends State<FlutterStartTutorialStatefulWidget> {
   late int value;
   late int initialValue;
 
