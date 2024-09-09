@@ -12,9 +12,21 @@ class DartStartPage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListTile(
-            title: const Text('Type'),
+            title: const Text('Tipi di Stato'),
             onTap: () {
-              Navigator.pushNamed(context, '/dart_type');
+              Navigator.pushNamed(context, '/dart_tutorial_type');
+            },
+          ),
+          ListTile(
+            title: const Text('Tipi di Collezioni'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_collectionType');
+            },
+          ),
+          ListTile(
+            title: const Text('Modificatori'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_modifier');
             },
           ),
           // Aggiungi altre voci di tutorial qui...

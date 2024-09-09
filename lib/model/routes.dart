@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/dart_begin/type/dart_type.dart';
 // DART START:
 import 'package:flutter_tutorial/intro_pages/dart_start.dart';
+import 'package:flutter_tutorial/dart_begin/type/dart_type.dart';
+import 'package:flutter_tutorial/dart_begin/collection_type/dart_collection_type.dart';
+import 'package:flutter_tutorial/dart_begin/modifier/modifier.dart';
 //FLUTTER START:
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0_intro/flutter_start_tutorial_0.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0pt5_widget/flutter_start_tutorial_0pt5.dart';
@@ -38,7 +40,11 @@ Map<String, WidgetBuilder> routes = {
   '/flutter_focus': (context) => const WorkingInProgressPage(),
   '/flutter_pro': (context) => const WorkingInProgressPage(),
   // DART START:
-  '/dart_type': (context) => const DartTutorialTypes(),
+  '/dart_tutorial_type': (context) => const DartTutorialTypes(),
+  '/dart_tutorial_collectionType': (context) =>
+      const DartTutorialCollectionType(),
+  '/dart_tutorial_modifier': (context) => const DartTutorialModifiers(),
+  // '/dart_tutorial_': (context) => const WorkingInProgressPage(),
   //FLUTTER START:
   '/flutter_start_tutorial_0': (context) => const FlutterStartTutorial0(),
   '/flutter_start_tutorial_1': (context) => const FlutterStartTutorial1(
