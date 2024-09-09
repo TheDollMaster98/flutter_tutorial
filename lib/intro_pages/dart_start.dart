@@ -48,6 +48,18 @@ class DartStartPage extends StatelessWidget {
               Navigator.pushNamed(context, '/dart_tutorial_selection_loops');
             },
           ),
+          ListTile(
+            title: const Text('Asserzioni'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_assertions');
+            },
+          ),
+          ListTile(
+            title: const Text('Funzioni'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_functions');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),

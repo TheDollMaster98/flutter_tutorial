@@ -8,6 +8,8 @@ import 'package:flutter_tutorial/dart_begin/modifier/modifier.dart';
 import 'package:flutter_tutorial/dart_begin/Selection_builders/selection_constructs.dart';
 import 'package:flutter_tutorial/dart_begin/loops/iteration_loops.dart';
 import 'package:flutter_tutorial/dart_begin/operations/operations.dart';
+import 'package:flutter_tutorial/dart_begin/assertions/assertions.dart';
+import 'package:flutter_tutorial/dart_begin/functions/functions_page.dart';
 
 //FLUTTER START:
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_intro/flutter_start_tutorial_intro.dart';
@@ -54,7 +56,11 @@ Map<String, WidgetBuilder> routes = {
   '/dart_tutorial_selection_constructs': (context) =>
       const DartTutorialSelectionConstructs(),
   '/dart_tutorial_loops': (context) => const DartTutorialIterationLoops(),
+  '/dart_tutorial_assertions': (context) => const DartTutorialAssertions(),
+  '/dart_tutorial_functions': (context) => const FunctionsPage(),
   // '/dart_tutorial_': (context) => const WorkingInProgressPage(),
+  // '/dart_tutorial_': (context) => const WorkingInProgressPage(),
+
   //FLUTTER START:
   '/flutter_start_tutorial_intro': (context) =>
       const FlutterStartTutorialIntro(),
