@@ -1,38 +1,37 @@
 final List<Map<String, String>> sections = [
   {
-    'title': 'Dart Begin',
-    'description':
-        'Il corso ideale per assicurarsi delle solide basi prima di tuffarsi nel mondo Flutter.',
+    'title': 'Dart Language',
+    'description': 'Esplora i concetti base e avanzati del linguaggio Dart.',
     'route': '/dart_begin'
   },
   {
-    'title': 'Flutter Start',
+    'title': 'Flutter Intro',
     'description':
-        'Scopri cos\'è Flutter, i suoi componenti, come fare chiamate HTTP e gestire i JSON.',
+        'Introduzione a Flutter: scopri i componenti essenziali, come gestire le chiamate HTTP e lavorare con i JSON.',
     'route': '/flutter_start'
   },
   {
     'title': 'Flutter Advanced',
     'description':
-        'App con più schermate, salva dati in locale e gestisci lo stato globale con il BLoC.',
+        'Gstione di schermate multiple, salvataggio dati in locale e stato globale con BLoC.',
     'route': '/flutter_advanced'
   },
   {
     'title': 'Flutter Architecture',
     'description':
-        'Approfondisci i concetti di Mapper, Provider, Repository e BLoC.',
+        'Comprendere Mapper, Provider, Repository e BLoC per strutturare meglio le app.',
     'route': '/flutter_architecture'
   },
   {
     'title': 'Flutter Focus',
     'description':
-        'Implementa l\'autenticazione, i temi, la dark mode e scopri 6 librerie indispensabili.',
+        'Auth, gestire i temi, abilitare la dark mode e utilizzare librerie essenziali.',
     'route': '/flutter_focus'
   },
   {
     'title': 'Flutter Pro',
     'description':
-        'Pubblicazione sugli store, plugin nativi, testing, responsive, animazioni e multilingue,',
+        'Pubblicazione sugli store, integrazione di plugin nativi, sviluppo responsive e multilingue.',
     'route': '/flutter_pro'
   }
 ];
