@@ -117,19 +117,19 @@ class FlutterStartPage extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Tutorial: Tab Bar'),
+            title: const Text('Tab Bar'),
             onTap: () {
               Navigator.pushNamed(context, '/flutter_start_tutorial_tabbar');
             },
           ),
           ListTile(
-            title: const Text('Tutorial: Drawer'),
+            title: const Text('Drawer'),
             onTap: () {
               Navigator.pushNamed(context, '/flutter_start_tutorial_drawer');
             },
           ),
           ListTile(
-            title: const Text('Tutorial: Dialog'),
+            title: const Text('Dialog'),
             onTap: () {
               Navigator.pushNamed(context, '/flutter_start_tutorial_dialog');
             },
