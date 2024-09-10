@@ -12,6 +12,7 @@ import 'package:flutter_tutorial/dart_begin/assertions/assertions.dart';
 import 'package:flutter_tutorial/dart_begin/functions/functions_page.dart';
 
 //FLUTTER START:
+import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_theory/flutter_start_totorial_theory.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_intro/flutter_start_tutorial_intro.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0_widget/flutter_start_tutorial_0_widget.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_1_stateless/flutter_start_tutorial_1_stateless.dart';
@@ -64,6 +65,7 @@ Map<String, WidgetBuilder> routes = {
   //FLUTTER START:
   '/flutter_start_tutorial_intro': (context) =>
       const FlutterStartTutorialIntro(),
+  '/flutter_start_tutorial_theory': (context) => const FlutterTheory(),
   '/flutter_start_tutorial_widget': (context) =>
       const FlutterStartTutorialWidget(),
   '/flutter_start_tutorial_stateless': (context) =>

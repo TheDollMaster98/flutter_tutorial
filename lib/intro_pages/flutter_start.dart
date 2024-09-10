@@ -12,6 +12,12 @@ class FlutterStartPage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListTile(
+            title: const Text('Teoria'),
+            onTap: () {
+              Navigator.pushNamed(context, '/flutter_start_tutorial_theory');
+            },
+          ),
+          ListTile(
             title: const Text('Intro'),
             onTap: () {
               Navigator.pushNamed(context, '/flutter_start_tutorial_intro');
