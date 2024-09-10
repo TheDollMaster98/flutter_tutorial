@@ -9,6 +9,7 @@ class FlutterStartTutorialIntro extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Intro'),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

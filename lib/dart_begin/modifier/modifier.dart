@@ -8,7 +8,7 @@ class DartTutorialModifiers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dart: Modificatori'),
+        title: const Text('Modificatori'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

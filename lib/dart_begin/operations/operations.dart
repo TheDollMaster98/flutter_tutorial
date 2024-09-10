@@ -8,7 +8,7 @@ class DartTutorialOperators extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dart: Operatori'),
+        title: const Text('Operatori'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

@@ -8,7 +8,7 @@ class DartTutorialAssertions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dart: Assertions'),
+        title: const Text('Assertions'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

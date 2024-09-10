@@ -14,7 +14,7 @@ class FunctionsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dart: Funzioni'),
+        title: const Text('Funzioni'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

@@ -8,7 +8,7 @@ class DartTutorialTypes extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dart: Tipi di Dato e Null Safety'),
+        title: const Text('Tipi di Dato e Null Safety'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
