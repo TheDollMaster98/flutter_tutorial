@@ -23,7 +23,7 @@ class FlutterStartTutorial13State extends State<FlutterStartTutorial13> {
     pageViewController.animateToPage(
       indicatorIndexPressed,
       duration: const Duration(milliseconds: 300),
-      curve: Curves.linear,
+      curve: Curves.easeInOut,
     );
   }
 
@@ -37,28 +37,28 @@ class FlutterStartTutorial13State extends State<FlutterStartTutorial13> {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: ListView(
-          // Utilizza ListView per evitare overflow verticale
           children: <Widget>[
-            // Spiegazione di PageView
             sectionTitle("PageView"),
             const SizedBox(height: 10),
             explanationText(
-              "PageView è un widget che permette di scorrere tra diverse pagine in orizzontale, "
-              "simile a un carosello. È utile per creare tutorial introduttivi, gallerie di immagini e altro ancora.",
+              "PageView è un widget che permette di scorrere tra diverse pagine. "
+              "La direzione dello scroll può essere modificata tra orizzontale e verticale "
+              "utilizzando la proprietà `scrollDirection`.",
             ),
             const SizedBox(height: 20),
             sectionTitle("Esempio di PageView con Indicatori"),
             const SizedBox(height: 10),
-            // Esempio di PageView con Indicatori
             propertyExample(
               "PageView",
               SizedBox(
-                height: 500, // Aggiungi un'altezza fissa per la PageView
+                height: 500,
                 child: Stack(
                   children: [
                     PageView.builder(
                       controller: pageViewController,
                       onPageChanged: onPageChanged,
+                      scrollDirection:
+                          Axis.horizontal, // Cambia qui per verticale
                       itemCount: splashPages.length,
                       itemBuilder: (context, index) =>
                           SplashScreen(splashPages[index]),
@@ -84,6 +84,7 @@ class FlutterStartTutorial13State extends State<FlutterStartTutorial13> {
 PageView.builder(
   controller: pageViewController,
   onPageChanged: onPageChanged,
+  scrollDirection: Axis.horizontal, // Cambia a Axis.vertical per scorrere verticalmente
   itemCount: splashPages.length,
   itemBuilder: (context, index) => SplashScreen(splashPages[index]),
 ),'''),
@@ -92,8 +93,8 @@ PageView.builder(
             sectionTitle("Indicatori di PageView"),
             const SizedBox(height: 10),
             explanationText(
-              "Gli indicatori di PageView sono dei piccoli cerchi che mostrano la pagina corrente e permettono di navigare tra le pagine toccando i cerchi. "
-              "Questi indicatori sono gestiti con il widget PageViewIndicators, che costruisce una riga di cerchi e utilizza GestureDetector per rilevare i tocchi sugli indicatori e navigare alla pagina corrispondente.",
+              "Gli indicatori di PageView mostrano la pagina corrente. "
+              "Permettono la navigazione tra le pagine tramite tocco diretto sugli indicatori.",
             ),
             const SizedBox(height: 10),
             propertyExample(
