@@ -97,7 +97,7 @@ Map<String, WidgetBuilder> routes = {
   '/flutter_start_tutorial_pageview': (context) =>
       const FlutterStartTutorial13(),
   '/flutter_start_tutorial_form': (context) => const FlutterStartTutorial14(),
-  '/flutter_start_tutorial_tabber': (context) => const FlutterStartTutorial15(),
+  '/flutter_start_tutorial_tabbar': (context) => const FlutterStartTutorial15(),
   '/flutter_start_tutorial_drawer': (context) => const FlutterStartTutorial16(),
   '/flutter_start_tutorial_dialog': (context) => const FlutterStartTutorial17(),
   // '/flutter_start_tutorial_': (context) => const FlutterStartTutorial(),

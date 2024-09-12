@@ -7,7 +7,7 @@ class NotFoundPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page Not Found'),
+        title: const Text('Pagina non trovata!'),
       ),
       body: const Center(
         child: Column(
@@ -19,7 +19,7 @@ class NotFoundPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              'Page Not Found',
+              'Ops, sei entrato in una sezione sconosciuta',
               style: TextStyle(fontSize: 20),
             ),
           ],
