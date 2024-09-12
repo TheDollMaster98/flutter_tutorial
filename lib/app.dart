@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/intro_pages/home_page.dart';
-import 'package:flutter_tutorial/model/routes.dart';
+import 'package:flutter_tutorial/routes/routes.dart';
 
 class CompleteFlutterGuideApp extends StatelessWidget {
   const CompleteFlutterGuideApp({super.key});

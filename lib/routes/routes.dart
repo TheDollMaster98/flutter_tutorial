@@ -11,7 +11,7 @@ import 'package:flutter_tutorial/dart_begin/operations/operations.dart';
 import 'package:flutter_tutorial/dart_begin/assertions/assertions.dart';
 import 'package:flutter_tutorial/dart_begin/functions/functions_page.dart';
 
-//FLUTTER START:
+// FLUTTER START:
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_theory/flutter_start_totorial_theory.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_intro/flutter_start_tutorial_intro.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_0_widget/flutter_start_tutorial_0_widget.dart';
@@ -33,22 +33,29 @@ import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_15_tabbar/
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_16_drawer/flutter_start_tutorial_16.dart';
 import 'package:flutter_tutorial/flutter_start/flutter_start_tutorial_17_dialog/flutter_start_tutorial_17.dart';
 
-//PAGE:
+// FLUTTER ADVANCED:
+import 'package:flutter_tutorial/flutter_advanced/flutter_advanced_commands_tools/dart_commands.dart';
+import 'package:flutter_tutorial/flutter_advanced/flutter_advanced_commands_tools/flutter_commands.dart';
+import 'package:flutter_tutorial/flutter_advanced/flutter_advanced_commands_tools/publication_steps.dart';
+
+// PAGE:
 import 'package:flutter_tutorial/intro_pages/flutter_start.dart';
 import 'package:flutter_tutorial/intro_pages/home_page.dart';
 import 'package:flutter_tutorial/intro_pages/working_in_progress_page.dart';
 import 'package:flutter_tutorial/intro_pages/not_found_page.dart';
+import 'package:flutter_tutorial/intro_pages/flutter_advanced.dart';
 
 Map<String, WidgetBuilder> routes = {
-  //PAGE:
+  // PAGES:
   '/home_page': (context) => const HomePage(),
   '/dart_begin': (context) => const DartStartPage(),
   '/flutter_start': (context) => const FlutterStartPage(),
-  '/flutter_advanced': (context) => const WorkingInProgressPage(),
+  '/flutter_advanced': (context) => const FlutterAdvancedtPage(),
   '/flutter_architecture': (context) => const WorkingInProgressPage(),
   '/flutter_focus': (context) => const WorkingInProgressPage(),
   '/flutter_pro': (context) => const WorkingInProgressPage(),
-  // DART START:
+
+  // DART TUTORIALS:
   '/dart_tutorial_type': (context) => const DartTutorialTypes(),
   '/dart_tutorial_collectionType': (context) =>
       const DartTutorialCollectionType(),
@@ -59,10 +66,8 @@ Map<String, WidgetBuilder> routes = {
   '/dart_tutorial_loops': (context) => const DartTutorialIterationLoops(),
   '/dart_tutorial_assertions': (context) => const DartTutorialAssertions(),
   '/dart_tutorial_functions': (context) => const FunctionsPage(),
-  // '/dart_tutorial_': (context) => const WorkingInProgressPage(),
-  // '/dart_tutorial_': (context) => const WorkingInProgressPage(),
 
-  //FLUTTER START:
+  // FLUTTER TUTORIALS:
   '/flutter_start_tutorial_intro': (context) =>
       const FlutterStartTutorialIntro(),
   '/flutter_start_tutorial_theory': (context) => const FlutterTheory(),
@@ -81,7 +86,6 @@ Map<String, WidgetBuilder> routes = {
       const FlutterStartTutorialButtons(),
   '/flutter_start_tutorial_colors': (context) =>
       const FlutterStartTutorialColors(),
-  //WIP per il refactory dei nomi delle rotte e dei file:
   '/flutter_start_tutorial_img': (context) => const FlutterStartTutorial5(),
   '/flutter_start_tutorial_containers': (context) =>
       const FlutterStartTutorial6(),
@@ -100,7 +104,11 @@ Map<String, WidgetBuilder> routes = {
   '/flutter_start_tutorial_tabbar': (context) => const FlutterStartTutorial15(),
   '/flutter_start_tutorial_drawer': (context) => const FlutterStartTutorial16(),
   '/flutter_start_tutorial_dialog': (context) => const FlutterStartTutorial17(),
-  // '/flutter_start_tutorial_': (context) => const FlutterStartTutorial(),
+
+  // FLUTTER ADVANCED:
+  '/flutter_advanced_dart_commands': (context) => const DartCommands(),
+  '/flutter_advanced_flutter_commands': (context) => const FlutterCommands(),
+  '/flutter_advanced_publication': (context) => const PublicationSteps(),
 };
 
 Route<dynamic> onUnknownRoute(RouteSettings settings) {
