@@ -60,6 +60,18 @@ class DartStartPage extends StatelessWidget {
               Navigator.pushNamed(context, '/dart_tutorial_functions');
             },
           ),
+          ListTile(
+            title: const Text('Classi'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_classes');
+            },
+          ),
+          ListTile(
+            title: const Text('Chiamate Asincrone'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_async');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),

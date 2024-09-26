@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/dart_begin/async/dart_async.dart';
+import 'package:flutter_tutorial/dart_begin/class/class_page.dart';
 
 // DART START:
 import 'package:flutter_tutorial/intro_pages/dart_start.dart';
@@ -66,6 +68,8 @@ Map<String, WidgetBuilder> routes = {
   '/dart_tutorial_loops': (context) => const DartTutorialIterationLoops(),
   '/dart_tutorial_assertions': (context) => const DartTutorialAssertions(),
   '/dart_tutorial_functions': (context) => const FunctionsPage(),
+  '/dart_tutorial_classes': (context) => const ClassesPage(),
+  '/dart_tutorial_async': (context) => const AsyncPage(),
 
   // FLUTTER TUTORIALS:
   '/flutter_start_tutorial_intro': (context) =>
