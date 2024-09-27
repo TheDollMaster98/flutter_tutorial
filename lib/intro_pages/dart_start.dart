@@ -72,6 +72,12 @@ class DartStartPage extends StatelessWidget {
               Navigator.pushNamed(context, '/dart_tutorial_async');
             },
           ),
+          ListTile(
+            title: const Text('Isolates'),
+            onTap: () {
+              Navigator.pushNamed(context, '/dart_tutorial_isolates');
+            },
+          ),
           // Aggiungi altre voci di tutorial qui...
         ],
       ),

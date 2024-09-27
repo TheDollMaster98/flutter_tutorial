@@ -164,6 +164,21 @@ class Todo {
           ''',
           style: TextStyle(fontFamily: 'monospace'),
         ),
+        SizedBox(height: 10),
+        Text(
+          '''
+**Quale delle due è più conveniente?**
+
+`performHTTPRequest()` è più conveniente in termini di **riutilizzabilità** e **flessibilità**. Può essere chiamata da diverse funzioni e utilizzata per effettuare vari tipi di richieste HTTP. Questa funzione è **modulare**, il che facilita la manutenzione e l'espansione del codice.
+
+`future()` è utile se hai bisogno di eseguire una serie di richieste HTTP in **sequenza** e vuoi gestirle in un'unica funzione. Tuttavia, se devi aggiungere nuove operazioni o gestire richieste parallele, potresti dover rivedere la sua struttura. In questo caso, usare una funzione come `performHTTPRequest()` in combinazione con altre tecniche (come `Future.wait()` per richieste parallele) sarebbe più efficiente.
+
+**Quando usare l'una o l'altra:**
+
+- Usa `performHTTPRequest()` se vuoi **modularità** e **flessibilità** per riutilizzare la stessa logica in più contesti.
+- Usa `future()` quando hai bisogno di una sequenza di operazioni asincrone **specifica** e vuoi gestire facilmente il flusso di esecuzione.
+          ''',
+        ),
         SizedBox(height: 20),
       ],
     );
