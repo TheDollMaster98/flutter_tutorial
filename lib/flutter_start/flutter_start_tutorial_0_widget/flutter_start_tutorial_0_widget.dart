@@ -102,90 +102,81 @@ class StatefulExampleState extends State<StatefulExample> {
 }'''),
           ),
           const SizedBox(height: 20),
-          sectionTitle("Esempi di Widget Comuni"),
+          sectionTitle("Esempio di InheritedWidget"),
           const SizedBox(height: 10),
           explanationText(
-            "Di seguito sono riportati alcuni dei widget più comuni utilizzati in Flutter:",
+            "Un `InheritedWidget` è un widget speciale che permette di condividere dati tra i widget discendenti "
+            "senza dover passare i dati manualmente a ogni livello della gerarchia. "
+            "È utile quando si ha bisogno di condividere lo stesso stato tra vari widget.",
           ),
-          const SizedBox(height: 20),
-          sectionTitle("Container"),
           const SizedBox(height: 10),
-          explanationText(
-            "Un Container è un widget versatile che può essere utilizzato per creare box rettangolari con proprietà di layout, decorazione, padding e margine.",
-          ),
+          sectionTitle("Esempio di InheritedWidget"
+              // const InheritedWidgetExample(),
+              ),
           propertyExample(
-            "Esempio di Container",
-            exampleContainer(),
-          ),
-          propertyExample(
-            "Codice Container:",
+            "Codice InheritedWidget:",
             const Text('''
-Widget exampleContainer() => const Container(
-  padding: const EdgeInsets.all(16),
-  color: Colors.blue.shade100,
-  child: const Text(
-    'Questo è un Container',
-    style: TextStyle(fontSize: 16),
-  ),
-),'''),
-          ),
-          const SizedBox(height: 20),
-          sectionTitle("Row e Column"),
-          const SizedBox(height: 10),
-          explanationText(
-            "Row e Column sono widget di layout che dispongono i loro figli rispettivamente in una riga o in una colonna.",
-          ),
-          propertyExample(
-            "Esempio di Row",
-            exampleRow(),
-          ),
-          propertyExample(
-            "Codice Row:",
-            const Text('''
-Widget exampleRow() => constRow(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: const [
-    Text('Elemento 1'),
-    Text('Elemento 2'),
-    Text('Elemento 3'),
-  ],
-),'''),
-          ),
-          propertyExample(
-            "Esempio di Column",
-            exampleColumn(),
-          ),
-          propertyExample(
-            "Codice Column:",
-            const Text('''
-Widget exampleColumn() => const Column(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: const [
-    Text('Elemento 1'),
-    Text('Elemento 2'),
-    Text('Elemento 3'),
-  ],
-),'''),
-          ),
-          const SizedBox(height: 20),
-          sectionTitle("Creazione di Widget personalizzati"),
-          const SizedBox(height: 10),
-          explanationText(
-            "Puoi creare i tuoi widget personalizzati definendo una funzione che restituisce un widget. Questo può essere utile per riutilizzare componenti UI comuni.",
-          ),
-          propertyExample(
-            "Esempio di Widget personalizzato",
-            exampleCustomWidget(),
-          ),
-          propertyExample(
-            "Codice Widget personalizzato:",
-            const Text('''
-Widget customText() => const Text(
-  'Questo è un widget personalizzato',
-  style: TextStyle(fontSize: 16, color: Colors.purple),
-);
+class MyInheritedWidget extends InheritedWidget {
+  final int counter;
 
-Widget exampleCustomWidget() => customText();'''),
+  const MyInheritedWidget({
+    required this.counter,
+    required Widget child,
+  }) : super(child: child);
+
+  static MyInheritedWidget? of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<MyInheritedWidget>();
+  }
+
+  @override
+  bool updateShouldNotify(MyInheritedWidget oldWidget) {
+    return oldWidget.counter != counter;
+  }
+}
+
+class InheritedWidgetExample extends StatefulWidget {
+  @override
+  _InheritedWidgetExampleState createState() => _InheritedWidgetExampleState();
+}
+
+class _InheritedWidgetExampleState extends State<InheritedWidgetExample> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MyInheritedWidget(
+      counter: _counter,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          CounterDisplay(),
+          ElevatedButton(
+            onPressed: _incrementCounter,
+            child: Text('Incrementa'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CounterDisplay extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final int? counter = MyInheritedWidget.of(context)?.counter;
+
+    return Text(
+      'Il valore del contatore è: \$counter',
+      style: TextStyle(fontSize: 24),
+    );
+  }
+}'''),
           ),
         ],
       ),
