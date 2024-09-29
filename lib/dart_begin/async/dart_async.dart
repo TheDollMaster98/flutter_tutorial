@@ -10,7 +10,7 @@ class AsyncPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chiamate HTTP in Dart'),
+        title: const Text('Programmazione Asincrona in Dart'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -18,6 +18,94 @@ class AsyncPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            // Programmazione Asincrona: Futures e Streams
+            sectionTitle("Programmazione Asincrona: Futures e Streams"),
+            const SizedBox(height: 10),
+            explanationText('''
+- async: Indica che una funzione è asincrona e restituisce una `Future`.
+- await: Attende il completamento di una `Future` prima di continuare.
+- Stream: Flusso di dati che trasmette valori in modo asincrono. Invece di restituire un singolo valore come una Future, uno Stream può emettere più valori nel tempo.
+              '''),
+            const SizedBox(height: 20),
+
+            // Esempio di Future e Async/Await
+            sectionTitle("Esempio di Future e Async/Await"),
+            const SizedBox(height: 10),
+            explanationText('''
+In questo esempio, utilizziamo `async` e `await` per attendere il risultato di una chiamata asincrona, simile a come funzionano le `Promise` in JavaScript.
+              '''),
+            propertyExample(
+              "Funzione Future con Async/Await",
+              const Text(
+                '''
+Future<void> getData() async {
+  print("Richiesta avviata...");
+  await Future.delayed(Duration(seconds: 2)); // Simuliamo una chiamata HTTP
+  print("Richiesta completata");
+}
+                ''',
+                style: TextStyle(fontSize: 14),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Stream e Async*
+            sectionTitle("Esempio Stream con Fibonacci"),
+            const SizedBox(height: 10),
+            explanationText('''
+Un `Stream` permette di emettere valori nel tempo in modo asincrono. In questo esempio, il `Stream` genera i numeri di Fibonacci uno alla volta.
+              '''),
+            propertyExample(
+              "Funzione Stream",
+              const Text(
+                '''
+Stream<int> fib(int n) async* {
+  int _fib(int n) => n <= 2 ? 1 : _fib(n - 2) + _fib(n - 1);
+  yield _fib(n);
+  if (n > 2) {
+    yield* fib(n - 1); // Stream ricorsivo
+  }
+}
+                ''',
+                style: TextStyle(fontSize: 14),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Iterable e Sync*
+            sectionTitle("Esempio Iterable con Fibonacci"),
+            const SizedBox(height: 10),
+            explanationText('''
+Un `Iterable` fornisce una sequenza di valori sincroni. A differenza di uno `Stream`, un Iterable produce immediatamente tutti i valori disponibili.
+              '''),
+            propertyExample(
+              "Funzione Iterable",
+              const Text(
+                '''
+Iterable<int> fib2(int n) sync* {
+  int _fib2(int n) => n <= 2 ? 1 : _fib2(n - 2) + _fib2(n - 1);
+  yield _fib2(n);
+  if (n > 2) {
+    yield* fib2(n - 1); // Iterable ricorsivo
+  }
+}
+                ''',
+                style: TextStyle(fontSize: 14),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Differenze Stream vs Iterable
+            sectionTitle("Differenze tra Stream e Iterable"),
+            explanationText('''
+- Uno Stream produce valori in modo asincrono e ci permette di ascoltare i dati man mano che arrivano.
+- Un Iterable, invece, è sincrono e produce immediatamente tutti i valori disponibili.
+
+Utilizziamo 'async*' e 'sync*' per creare Streams e Iterables rispettivamente.
+              '''),
+            const SizedBox(height: 20),
+
+            // Parte delle chiamate HTTP
             sectionTitle("Chiamate HTTP in Dart"),
             const SizedBox(height: 10),
             explanationText(
@@ -153,7 +241,7 @@ Offre flessibilità e riutilizzabilità, essendo facilmente estendibile a nuovi 
 `future()` è utile per sequenze di operazioni specifiche in cui si ha bisogno di un flusso controllato di chiamate, 
 ma non è riutilizzabile come `performHTTPRequest()` in situazioni diverse o complesse.
 
-**Quando usare l'una o l'altra:** 
+Quando usare l'una o l'altra:
 - `performHTTPRequest()` è ideale quando si vuole modularità e flessibilità.
 - `future()` si usa per scenari in cui una sequenza ben definita di chiamate asincrone è sufficiente.
               ''',
@@ -198,7 +286,6 @@ class Todo {
                 style: TextStyle(fontSize: 14),
               ),
             ),
-            const SizedBox(height: 20),
           ],
         ),
       ),
