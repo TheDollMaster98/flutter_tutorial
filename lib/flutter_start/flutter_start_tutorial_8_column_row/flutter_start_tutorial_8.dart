@@ -526,7 +526,164 @@ Text(
 ),'''),
             ),
             const SizedBox(height: 40),
-            // Aggiungi altre proprietà e esempi di stile qui...
+
+            // Expanded e Flexible
+            sectionTitle("Widget Expanded e Flexible"),
+            const SizedBox(height: 10),
+            explanationText(
+              "I widget Expanded e Flexible sono utilizzati all'interno di Row e Column per gestire lo spazio disponibile in modo flessibile. "
+              "Expanded occupa tutto lo spazio rimanente, mentre Flexible permette di specificare quanto spazio occupare in proporzione.",
+            ),
+            const SizedBox(height: 10),
+            // Esempio di Expanded
+            propertyExample(
+              "Esempio di Expanded",
+              Container(
+                height: 100,
+                color: Colors.grey.shade200,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.blue,
+                        child: const Center(
+                          child: Text("Expanded",
+                              style: TextStyle(color: Colors.white)),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 100,
+                      color: Colors.red,
+                      child: const Center(
+                        child: Text("Fixed Width",
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            propertyExample(
+              "Codice Expanded:",
+              const Text('''
+Row(
+  children: [
+    Expanded(
+      child: Container(
+        color: Colors.blue,
+        child: Center(child: Text("Expanded", style: TextStyle(color: Colors.white))),
+      ),
+    ),
+    Container(
+      width: 100,
+      color: Colors.red,
+      child: Center(child: Text("Fixed Width", style: TextStyle(color: Colors.white))),
+    ),
+  ],
+),'''),
+            ),
+            const SizedBox(height: 20),
+
+            // Esempio di Flexible
+            propertyExample(
+              "Esempio di Flexible",
+              Container(
+                height: 100,
+                color: Colors.grey.shade200,
+                child: Row(
+                  children: [
+                    Flexible(
+                      flex: 2,
+                      child: Container(
+                        color: Colors.blue,
+                        child: const Center(
+                          child: Text("Flexible 2",
+                              style: TextStyle(color: Colors.white)),
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                      flex: 1,
+                      child: Container(
+                        color: Colors.green,
+                        child: const Center(
+                          child: Text("Flexible 1",
+                              style: TextStyle(color: Colors.white)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            propertyExample(
+              "Codice Flexible:",
+              const Text('''
+Row(
+  children: [
+    Flexible(
+      flex: 2,
+      child: Container(
+        color: Colors.blue,
+        child: Center(child: Text("Flexible 2", style: TextStyle(color: Colors.white))),
+      ),
+    ),
+    Flexible(
+      flex: 1,
+      child: Container(
+        color: Colors.green,
+        child: Center(child: Text("Flexible 1", style: TextStyle(color: Colors.white))),
+      ),
+    ),
+  ],
+),'''),
+            ),
+            const SizedBox(height: 20),
+
+            // Aggiunta di Wrap
+            sectionTitle("Wrap"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Il widget Wrap posiziona i figli in più righe o colonne automaticamente, adattandosi allo spazio disponibile. "
+              "È utile per layout reattivi con un numero variabile di elementi.",
+            ),
+            propertyExample(
+              "Esempio di Wrap",
+              const Wrap(
+                spacing: 8.0,
+                runSpacing: 4.0,
+                children: [
+                  Chip(label: Text("Tag 1")),
+                  Chip(label: Text("Tag 2")),
+                  Chip(label: Text("Tag 3")),
+                  Chip(label: Text("Tag 4")),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Aggiunta di Positioned (con spiegazione relativa a Stack)
+            sectionTitle("Positioned (con Stack)"),
+            const SizedBox(height: 10),
+            explanationText(
+              "Il widget Positioned è utilizzato per posizionare i suoi figli in modo assoluto all'interno di un widget Stack. "
+              "È ideale per layout in cui gli elementi devono essere posizionati con precisione.",
+            ),
+            propertyExample(
+              "Esempio di Stack con Positioned",
+              Stack(
+                children: [
+                  Container(width: 200, height: 200, color: Colors.blue),
+                  const Positioned(
+                    top: 10,
+                    right: 10,
+                    child: Icon(Icons.star, color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
           ],
         ),
       ),
