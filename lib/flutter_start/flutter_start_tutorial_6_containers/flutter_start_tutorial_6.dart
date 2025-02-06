@@ -31,7 +31,7 @@ class FlutterStartTutorial6 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.grey.withAlpha((0.5 * 255).toInt()),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: const Offset(0, 3),
@@ -95,7 +95,7 @@ textAlign: TextAlign.center,
                       blurRadius: 5,
                       // Quanto deve allargarsi al di fuori del contenitore.
                       spreadRadius: 2,
-                      color: Colors.black.withOpacity(0.3),
+                      color: Colors.black.withAlpha((0.3 * 255).toInt()),
                     ),
                   ],
                 ),
@@ -261,7 +261,7 @@ Text(
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.5),
+                      color: Colors.black.withAlpha((0.5 * 255).toInt()),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: const Offset(0, 3),

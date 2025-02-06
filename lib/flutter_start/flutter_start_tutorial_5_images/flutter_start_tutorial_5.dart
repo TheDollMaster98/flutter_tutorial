@@ -168,7 +168,7 @@ Future<Widget> _loadImageFromFile() async {
                         "https://images.unsplash.com/photo-1605517021366-1b0393fdb50a?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                     fit: BoxFit.cover,
                     colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.5),
+                      Colors.black.withAlpha((0.5 * 255).toInt()),
                       BlendMode.darken,
                     ),
                   ),

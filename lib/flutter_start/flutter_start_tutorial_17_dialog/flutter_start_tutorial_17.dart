@@ -39,9 +39,9 @@ class FlutterStartTutorial17 extends StatelessWidget {
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStatePropertyAll(Colors.red.shade100),
+                        WidgetStatePropertyAll(Colors.red.shade100),
                     foregroundColor:
-                        MaterialStatePropertyAll(Colors.red.shade900),
+                        WidgetStatePropertyAll(Colors.red.shade900),
                   ),
                   onPressed: () => Navigator.pop(context),
                   child: const Text("Spedisci Email"),

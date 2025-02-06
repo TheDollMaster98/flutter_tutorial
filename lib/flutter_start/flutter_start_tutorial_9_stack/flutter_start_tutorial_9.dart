@@ -222,7 +222,7 @@ Stack(
                     child: Container(
                       width: 150,
                       height: 150,
-                      color: Colors.green.withOpacity(0.5),
+                      color: Colors.green.withAlpha((0.5 * 255).toInt()),
                     ),
                   ),
                   Positioned(
@@ -231,7 +231,7 @@ Stack(
                     child: Container(
                       width: 100,
                       height: 100,
-                      color: Colors.red.withOpacity(0.5),
+                      color: Colors.red.withAlpha((0.5 * 255).toInt()),
                     ),
                   ),
                 ],
