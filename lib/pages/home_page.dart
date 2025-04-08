@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter 3 Guida'),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -29,7 +30,7 @@ class HomePage extends StatelessWidget {
             final section = sections[index];
 
             return InkWell(
-              onTap: () => context.go(section['route']!), // GoRouter navigation
+              onTap: () => context.push(section['route']!), // GoRouter navigation
               child: Card(
                 color: Theme.of(context).cardColor,
                 child: Padding(

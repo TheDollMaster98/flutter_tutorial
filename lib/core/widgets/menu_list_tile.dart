@@ -16,7 +16,7 @@ class MenuListTile extends StatelessWidget {
     return ListTile(
       title: Text(title),
       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-      onTap: () => context.go(route),
+      onTap: () => context.push(route),
     );
   }
 }
