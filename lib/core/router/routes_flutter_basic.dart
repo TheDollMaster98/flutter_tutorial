@@ -21,6 +21,7 @@ import 'package:flutter_tutorial/features/flutter_basic/pages/tabbar_tutorial_pa
 import 'package:flutter_tutorial/features/flutter_basic/pages/theory_page.dart';
 import 'package:flutter_tutorial/features/flutter_basic/pages/tutorial_intro.dart';
 import 'package:flutter_tutorial/features/flutter_basic/pages/widgets_intro_page.dart';
+import 'package:flutter_tutorial/features/flutter_basic/pages/tiles_page.dart';
 
 final List<GoRoute> flutterBasicRoutes = [
   GoRoute(path: '/flutter_basic', builder: (context, state) => const FlutterBasicHomePage()),
@@ -41,6 +42,7 @@ final List<GoRoute> flutterBasicRoutes = [
   GoRoute(path: '/flutter_basic_gridview', builder: (context, state) => const GridViewPage()),
   GoRoute(path: '/flutter_basic_pageview', builder: (context, state) => const PageViewPage()),
   GoRoute(path: '/flutter_basic_form', builder: (context, state) => const FormWidgetsPage()),
+  GoRoute(path: '/flutter_basic_tile', builder: (context, state) => const TilesPage()),
   GoRoute(path: '/flutter_basic_tabbar', builder: (context, state) => const TabBarPage()),
   GoRoute(path: '/flutter_basic_drawer', builder: (context, state) => const DrawerPage()),
   GoRoute(path: '/flutter_basic_dialog', builder: (context, state) => const DialogPage()),

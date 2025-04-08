@@ -29,6 +29,7 @@ class FlutterBasicHomePage extends StatelessWidget {
           MenuListTile(title: 'ListView', route: '/flutter_basic_listview'),
           MenuListTile(title: 'GridView', route: '/flutter_basic_gridview'),
           MenuListTile(title: 'PageView e Indicatori', route: '/flutter_basic_pageview'),
+          MenuListTile(title: 'Tile', route: '/flutter_basic_tile'),
           MenuListTile(title: 'Forms', route: '/flutter_basic_form'),
           MenuListTile(title: 'Tab Bar', route: '/flutter_basic_tabbar'),
           MenuListTile(title: 'Drawer', route: '/flutter_basic_drawer'),
