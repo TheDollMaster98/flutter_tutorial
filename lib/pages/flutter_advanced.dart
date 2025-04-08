@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_tutorial/core/widgets/menu_list_tile.dart';
 
 class FlutterAdvancedtPage extends StatelessWidget {
   const FlutterAdvancedtPage({super.key});
@@ -12,19 +12,10 @@ class FlutterAdvancedtPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView(
-        children: <Widget>[
-          ListTile(
-            title: const Text('Comandi Dart'),
-            onTap: () => context.go('/flutter_advanced_dart_commands'),
-          ),
-          ListTile(
-            title: const Text('Comandi Flutter'),
-            onTap: () => context.go('/flutter_advanced_flutter_commands'),
-          ),
-          ListTile(
-            title: const Text('Comandi Pubblicazione'),
-            onTap: () => context.go('/flutter_advanced_publication'),
-          ),
+        children: const [
+          MenuListTile(title: 'Comandi Dart', route: '/flutter_advanced_dart_commands'),
+          MenuListTile(title: 'Comandi Flutter', route: '/flutter_advanced_flutter_commands'),
+          MenuListTile(title: 'Comandi Pubblicazione', route: '/flutter_advanced_publication'),
         ],
       ),
     );

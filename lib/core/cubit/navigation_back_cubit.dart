@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
-class NavigationBackCubit extends Cubit<void> {
-   NavigationBackCubit() : super(null);
+class NavigationCubit extends Cubit<void> {
+  NavigationCubit() : super(null);
 
   void goBack(BuildContext context) {
-    if (Navigator.of(context).canPop()) {
-      Navigator.of(context).pop();
-    } else {
-      Navigator.of(context).pushNamed('/home_page');
+    if (context.canPop()) {
+      context.pop();
     }
   }
 }

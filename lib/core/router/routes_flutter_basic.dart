@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/features/flutter_basic/flutter_basics_home.dart';
+import 'package:flutter_tutorial/pages/flutter_basics_home.dart';
 import 'package:flutter_tutorial/features/flutter_basic/pages/buttons_page.dart';
 import 'package:flutter_tutorial/features/flutter_basic/pages/card_page.dart';
 import 'package:flutter_tutorial/features/flutter_basic/pages/colors_page.dart';

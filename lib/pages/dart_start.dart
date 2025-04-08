@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_tutorial/core/widgets/menu_list_tile.dart';
 
 class DartStartPage extends StatelessWidget {
   const DartStartPage({super.key});
@@ -12,51 +12,18 @@ class DartStartPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView(
-        children: <Widget>[
-          ListTile(
-            title: const Text('Tipi di Stato'),
-            onTap: () => context.go('/dart_tutorial_type'),
-          ),
-          ListTile(
-            title: const Text('Tipi di Collezioni'),
-            onTap: () => context.go('/dart_tutorial_collectionType'),
-          ),
-          ListTile(
-            title: const Text('Modificatori'),
-            onTap: () => context.go('/dart_tutorial_modifier'),
-          ),
-          ListTile(
-            title: const Text('Operatori'),
-            onTap: () => context.go('/dart_tutorial_operators'),
-          ),
-          ListTile(
-            title: const Text('Costruttori di Selezione'),
-            onTap: () => context.go('/dart_tutorial_selection_constructs'),
-          ),
-          ListTile(
-            title: const Text('Costruttori di Iterazione'),
-            onTap: () => context.go('/dart_tutorial_loops'),
-          ),
-          ListTile(
-            title: const Text('Asserzioni'),
-            onTap: () => context.go('/dart_tutorial_assertions'),
-          ),
-          ListTile(
-            title: const Text('Funzioni'),
-            onTap: () => context.go('/dart_tutorial_functions'),
-          ),
-          ListTile(
-            title: const Text('Classi'),
-            onTap: () => context.go('/dart_tutorial_classes'),
-          ),
-          ListTile(
-            title: const Text('Chiamate Asincrone'),
-            onTap: () => context.go('/dart_tutorial_async'),
-          ),
-          ListTile(
-            title: const Text('Isolates'),
-            onTap: () => context.go('/dart_tutorial_isolates'),
-          ),
+        children: const [
+          MenuListTile(title: 'Tipi di Stato', route: '/dart_tutorial_type'),
+          MenuListTile(title: 'Tipi di Collezioni', route: '/dart_tutorial_collectionType'),
+          MenuListTile(title: 'Modificatori', route: '/dart_tutorial_modifier'),
+          MenuListTile(title: 'Operatori', route: '/dart_tutorial_operators'),
+          MenuListTile(title: 'Costruttori di Selezione', route: '/dart_tutorial_selection_constructs'),
+          MenuListTile(title: 'Costruttori di Iterazione', route: '/dart_tutorial_loops'),
+          MenuListTile(title: 'Asserzioni', route: '/dart_tutorial_assertions'),
+          MenuListTile(title: 'Funzioni', route: '/dart_tutorial_functions'),
+          MenuListTile(title: 'Classi', route: '/dart_tutorial_classes'),
+          MenuListTile(title: 'Chiamate Asincrone', route: '/dart_tutorial_async'),
+          MenuListTile(title: 'Isolates', route: '/dart_tutorial_isolates'),
         ],
       ),
     );

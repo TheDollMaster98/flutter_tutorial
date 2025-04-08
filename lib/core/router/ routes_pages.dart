@@ -1,4 +1,4 @@
-import 'package:flutter_tutorial/features/flutter_basic/flutter_basics_home.dart';
+import 'package:flutter_tutorial/pages/flutter_basics_home.dart';
 import 'package:flutter_tutorial/pages/dart_start.dart';
 import 'package:flutter_tutorial/pages/flutter_advanced.dart';
 import 'package:flutter_tutorial/pages/home_page.dart';
