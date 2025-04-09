@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/core/widgets/tutorial_widgets.dart';
+import 'package:go_router/go_router.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({super.key});
@@ -54,8 +55,9 @@ class DrawerPage extends StatelessWidget {
             title: const Text("Home"),
             leading: const Icon(Icons.home),
             onTap: () {
-              Navigator.pushNamedAndRemoveUntil(context, '/home_page', (route) => false);
-              Navigator.pushNamed(context, '/pages');
+              //Navigator.pushNamedAndRemoveUntil(context, '/home_page', (route) => true);
+              //Navigator.pushNamed(context, '/flutter_basic');
+              context.go('/flutter_basic');
             },
           ),
           ListTile(
